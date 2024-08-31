@@ -1,4 +1,6 @@
-title: Midnight theme
-description: Midnight is a theme for GitHub Pages.
+title: Tchai's Halls of Reflection
+description: Work stuff and some intellectual self-indulgences :P
 google_analytics:
 theme: jekyll-theme-midnight
+github:
+    is_project_page: false

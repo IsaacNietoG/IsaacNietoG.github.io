@@ -2,3 +2,19 @@
 ---
 
 @import "jekyll-theme-midnight";
+
+.menu__inner {
+  display: flex;            /* Display list items in a row */
+  list-style-type: none;    /* Remove default bullet points */
+  padding: 0;               /* Remove default padding */
+  margin: 0;                /* Remove default margin */
+  justify-content: center;  /* Centers the content */
+}
+
+.menu__inner li {
+  margin-right: 20px;       /* Add space between items */
+}
+
+.menu__inner li:last-child {
+  margin-right: 0;          /* Remove margin from the last item */
+}
