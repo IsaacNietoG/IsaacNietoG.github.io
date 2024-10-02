@@ -1,5 +1,5 @@
 ---
 layout: default
 ---
-# Document Title
+# Welcome to my blog
 
