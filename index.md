@@ -12,8 +12,8 @@ title: Inicio
 </head>
 <body>
     <section id="introduction">
-        <h2>Bienvenido a mi portafolio</h2>
-        <p>Soy un desarrollador apasionado por la tecnología y la seguridad informática. Aquí puedes explorar mis proyectos, leer mis artículos de blog, y aprender más sobre mí.</p>
+        <h2>Hey! Welcome to my site!</h2>
+        <p>My name is Isaac, although in all the nerdy places you'll find me as mrtaichi. I'm a computer scientist, or at least I try to be. Passionate about technology in general and cibersecurity. Here you can explore my projects, read my blog articles (sometimes I say interesting stuff) and learn more about me.</p>
     </section>
 
     <section id="featured-projects">
