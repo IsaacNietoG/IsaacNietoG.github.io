@@ -13,7 +13,7 @@ title: Inicio
 <body>
     <section id="introduction">
         <h2>Hey! Welcome to my site!</h2>
-        <p>My name is Isaac, although in all the nerdy places you'll find me as mrtaichi. I'm a computer scientist, or at least I try to be. Passionate about technology in general and cibersecurity. Here you can explore my projects, read my blog articles (sometimes I say interesting stuff) and learn more about me.</p>
+        <p>My name is Isaac, although in all the places you'll find me as mrtaichi. I'm a computer scientist, or at least I try to be. Passionate about technology in general and cibersecurity. Here you can explore my projects, read my blog articles (sometimes I say interesting stuff) and learn more about me.</p>
     </section>
 
     <section id="featured-projects">
