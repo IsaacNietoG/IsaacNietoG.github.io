@@ -18,3 +18,56 @@
 .menu__inner li:last-child {
   margin-right: 0;          /* Remove margin from the last item */
 }
+
+.projects {
+  margin: 20px auto;
+  width: 80%;
+  max-width: 900px;
+}
+
+.project {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.project h2 {
+  margin: 15px 0 10px;
+}
+
+.project a {
+  text-decoration: none;
+  color: #0056b3;
+}
+
+.project a:hover {
+  text-decoration: underline;
+}
+
+.tech-icons {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.tech-icons li {
+  margin-right: 10px;
+}
+
+.tech-icons img {
+  width: 40px;
+  height: 40px;
+}
