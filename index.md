@@ -20,8 +20,8 @@ title: Inicio
         <h2>Proyectos Destacados</h2>
         <div class="projects">
             <div class="project">
-                <h3><a href="{{ '/portfolio/proyecto-1' | relative_url }}">Proyecto 1</a></h3>
-                <p>Descripción breve del proyecto 1.</p>
+                <h3><a href="{{ '/portfolio/disbank' | relative_url }}">Disbank</a></h3>
+                <p>.A brief project I made with my friend @DystopianRescuer for a Modeling and Programming Course in school, we made a Java Application connected to a Clip Terminal, minded for shared use of the last one between several local businesses</p>
             </div>
             <div class="project">
                 <h3><a href="{{ '/portfolio/proyecto-2' | relative_url }}">Proyecto 2</a></h3>
