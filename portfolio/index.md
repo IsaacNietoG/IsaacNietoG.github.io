@@ -28,6 +28,19 @@ This are some of the projects that I've worked on.
       <li><img src="/assets/icons/java.png" alt="Java"></li>
       <li><img src="/assets/icons/svg.png" alt="Scalable Vector Graphics"></li>
     </ul>
+  </div> 
+ <div class="project">
+    <img src="/assets/images/portfolio/peopleCounter/demo.png" alt="Example usage of the project">
+    <h2><a href="./peopleCounter">People Counter</a></h2>
+    <p>
+    A short project I made with my friend <a href="https://github.com/DystopianRescuer">@DystopianRescuer</a>. This is a real-time people counter that uses cutting edge AI models and computer vision techniques, to accurately count individuals crossing a predetermined virtual boundary.
+    </p>
+    <p><strong>Technologies used:</strong></p>
+    <ul class="tech-icons">
+      <li><a href = https://www.python.org><img src="/assets/icons/python.png" alt="Python"></a></li>
+      <li><a href = https://www.ultralytics.com><img src="/assets/icons/ultralytics.svg" alt="Ultralytics YOLO8"></a></li>
+      <li><a href = https://opencv.org><img src="/assets/icons/opencv.png" alt="OpenCV"></a></li>
+    </ul>
   </div>
 </section>
 
