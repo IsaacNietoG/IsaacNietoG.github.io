@@ -57,6 +57,11 @@ I like to spend time with my friends, going out for bike trips (maybe I have som
                 <h3><a href="{{ '/portfolio/eddCanek' | relative_url }}">Data Structures in Java</a></h3>
                 <p>Implementations of some popular data structures in Java (with good performance btw)</p>
             </div>
+            <div class="project">
+                <h3><a href="{{ '/portfolio/peopleCounter' | relative_url }}">People Counter</a></h3>
+                <p>Real-time people counter powered by AI models in Python</p>
+            </div>
+
             <!-- Agrega más proyectos destacados aquí -->
         </div>
     </section>
