@@ -37,9 +37,9 @@ This are some of the projects that I've worked on.
     </p>
     <p><strong>Technologies used:</strong></p>
     <ul class="tech-icons">
-      <li><a href = https://www.python.org><img src="/assets/icons/python.png" alt="Python"></a></li>
-      <li><a href = https://www.ultralytics.com><img src="/assets/icons/ultralytics.svg" alt="Ultralytics YOLO8"></a></li>
-      <li><a href = https://opencv.org><img src="/assets/icons/opencv.png" alt="OpenCV"></a></li>
+      <li><img src="/assets/icons/python.png" alt="Python"></li>
+      <li><img src="/assets/icons/ultralytics.svg" alt="Ultralytics YOLO8"></li>
+      <li><img src="/assets/icons/opencv.png" alt="OpenCV"></li>
     </ul>
   </div>
 </section>
