@@ -15,3 +15,38 @@ highlight_code = false
 
 [extra]
 # Put all your custom variables here
+
+# The profile on home page.
+[extra.profile]
+name = "Isaac Nieto (mrtaichi)"
+bio = "Welcome to my chambers of reflection. Here you'll find some of my projects, blog posts and info about me"
+# The URL of avatar.
+avatar_url = "icons/favicon.ico"
+# Invert color in dark mode.
+avatar_invert = true
+
+# The social icons below the profile on the home page.
+[[extra.profile.social]]
+name = "github"
+url = "https://github.com/IsaacNietoG"
+
+[[extra.profile.social]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/isaac-julian-nieto-gallegos-79261a243/"
+
+[[extra.profile.social]]
+name = "telegram"
+url = "https://t.me/mrtaichi"
+
+# The top menu.
+[[extra.menu]]
+name = "Projects"
+url = "$BASE_URL/projects"
+
+[[extra.menu]]
+name = "Blog"
+url = "$BASE_URL/archive"
+
+[[extra.menu]]
+name = "About"
+url = "$BASE_URL/about"
