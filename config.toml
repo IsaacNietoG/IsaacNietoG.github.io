@@ -40,8 +40,8 @@ url = "https://t.me/mrtaichi"
 
 # The top menu.
 [[extra.menu]]
-name = "Projects"
-url = "$BASE_URL/projects"
+name = "Portfolio"
+url = "$BASE_URL/portfolio"
 
 [[extra.menu]]
 name = "Blog"

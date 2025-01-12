@@ -17,7 +17,7 @@
       <ul class="tech-icons">
         {% for tech in project.techs %}
         <li>
-         <img src="/icons/{{ tech | downcase }}.png" alt="{{ tech | capitalize }}">
+         <img src="/icons/{{ tech | lower }}.png" alt="{{ tech | capitalize }}">
         </li>
         {% endfor %}
       </ul>

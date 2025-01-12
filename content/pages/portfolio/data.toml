@@ -1,0 +1,21 @@
+[[project]]
+name = "Data Structures in Java"
+desc = "Project for a Data Structures Course I took in second semester of my CS degree. In this project, I implemented in Java some of the most known data structures, like binary trees, stacks, queues and of course double linked lists. I also made some projects related to them including a (to be completed) graphicator among others. In this project I learned a lot about the data structures implemented and about the Java Programming Language."
+techs = ["java", "svg"]
+links = [
+    { name = "Github", url = "https://github.com/IsaacNietoG/estructuras-de-datos-practicas-2024" },
+]
+[[project]]
+name = "Disbank"
+desc = "A brief project I made with my friend @DystopianRescuer for a Modeling and Programming Course in school, we made a Java Application connected to a Clip Terminal, minded for shared use of the last one between several local businesses"
+techs = ["java", "telegram", "clip"]
+links = [
+    { name = "Github", url = "https://github.com/DystopianRescuer/disbank" },
+]
+[[project]]
+name = "People Counter"
+desc = "A short project I made with my friend @DystopianRescuer. This is a real-time people counter that uses cutting edge AI models and computer vision techniques, to accurately count individuals crossing a predetermined virtual boundary."
+techs = ["python", "opencv"]
+links = [
+    { name = "Github", url = "https://github.com/DystopianRescuer/PeopleCounter" },
+]
