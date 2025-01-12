@@ -14,9 +14,13 @@
   <p>{{ project.desc }}</p>
   <div class="my-2 flex flex-wrap items-center justify-between">
     <div class="flex flex-wrap gap-x-2 text-sm opacity-60">
-      {% for tag in project.tags %}
-      <span>#{{ tag }}</span>
-      {% endfor %}
+      <ul class="tech-icons">
+        {% for tech in project.techs %}
+        <li>
+         <img src="/icons/{{ tech | downcase }}.png" alt="{{ tech | capitalize }}">
+        </li>
+        {% endfor %}
+      </ul>
     </div>
     <div class="flex flex-wrap gap-x-2">
       {% for link in project.links %}

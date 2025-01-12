@@ -1885,6 +1885,22 @@ article {
   background: var(--url) center center no-repeat;
 }
 
+.tech-icons {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.tech-icons li {
+  margin-right: 10px;
+}
+
+.tech-icons img {
+  width: 40px;
+  height: 40px;
+}
+
 .dark\:prose-invert:is(.dark *) {
   --tw-prose-body: var(--tw-prose-invert-body);
   --tw-prose-headings: var(--tw-prose-invert-headings);
