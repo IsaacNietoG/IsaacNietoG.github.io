@@ -1,8 +1,0 @@
-title: Tchai's Halls of Reflection
-description: Work stuff and some intellectual self-indulgences :P
-google_analytics:
-theme: jekyll-theme-midnight
-github:
-    is_project_page: false
-exclude:
-    - _posts/2024-08-30-welcome-to-jekyll.markdown
