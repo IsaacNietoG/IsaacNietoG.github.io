@@ -8,6 +8,7 @@ title = "Tchai's Halls of Reflection"
 
 # Site author
 author = "IsaacNietoG"
+
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
 
