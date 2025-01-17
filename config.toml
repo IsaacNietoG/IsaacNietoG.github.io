@@ -28,7 +28,7 @@ highlight_code = false
 name = "Isaac Nieto (mrtaichi)"
 bio = "Welcome to my chambers of reflection. Here you'll find some of my projects, blog posts and info about me"
 # The URL of avatar.
-avatar_url = "icons/favicon.ico"
+avatar_url = "/favicon.ico"
 # Invert color in dark mode.
 avatar_invert = true
 
