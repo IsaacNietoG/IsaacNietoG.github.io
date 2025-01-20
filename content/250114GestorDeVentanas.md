@@ -1,7 +1,8 @@
 +++
-title = "Por qué cambiaría un entorno de escritorio por un gestor de ventanas?"
+title = "¿Por qué cambiaría un entorno de escritorio por un gestor de ventanas?"
 date = "2025-01-14"
 description = "En este artículo te voy a platicar mi experiencia haciendo el cambio a un gestor de ventanas, te hablaré de todos los obstáculos que me he topado a lo largo de este proceso, pero también todas las ventajas que me he encontrado"
+path = "blog/250114gestorDeVentanas"
 +++
 
 # Pequeños antecedentes
