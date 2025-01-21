@@ -52,7 +52,7 @@ url = "$BASE_URL/portfolio"
 
 [[extra.menu]]
 name = "Blog"
-url = "$BASE_URL/archive"
+url = "$BASE_URL/blog"
 
 [[extra.menu]]
 name = "About"
