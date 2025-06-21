@@ -1,0 +1,423 @@
+<!doctype html>
+<html class="not-ready lg:text-base" lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Title -->
+  <title>
+    Writeup para Attacktive Directory - TryHackMe - Tchai&#x27;s Halls of Reflection
+  </title>
+
+  <!-- Meta -->
+  <meta name="theme-color" />
+
+  
+  <!-- Author -->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  <meta name="description" content="Resultados de mi sesión de estudio sobre Attacktive Directory para dar clases en Pumahat. Este artículo irá cambiando con el paso del tiempo probablemente" />
+  <meta name="author" content="IsaacNietoG" />
+  <!-- The Open Graph protocol -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Writeup para Attacktive Directory - TryHackMe" />
+  <meta property="og:site_name" content="Tchai&#x27;s Halls of Reflection" />
+  <meta property="og:description" content="Resultados de mi sesión de estudio sobre Attacktive Directory para dar clases en Pumahat. Este artículo irá cambiando con el paso del tiempo probablemente" />
+  <meta property="og:url" content="https:&#x2F;&#x2F;IsaacNietoG.github.io&#x2F;blog&#x2F;250410AttacktiveWriteup&#x2F;" />
+  
+  <!---->
+  
+  <!---->
+  
+
+  <!-- CSS & JS -->
+  <link rel="preload stylesheet" as="style" href="https://IsaacNietoG.github.io/main.css" />
+  <style>
+    :root {
+      --bg: #f4f4f5;
+      --bg-dark: #18181b;
+      --header: #e4e4e7;
+      --header-dark: #27272a;
+    }
+  </style>
+
+  
+
+  <!-- Dark Icon -->
+  <link rel="preload" as="image" href="https://IsaacNietoG.github.io/icons/theme.svg" />
+
+  <!-- Math -->
+  
+  <!---->
+
+  <!-- Mermaid -->
+  
+  <!---->
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://IsaacNietoG.github.io/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://IsaacNietoG.github.io/apple-touch-icon.png" />
+
+  <!-- Feeds -->
+  
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https:&#x2F;&#x2F;IsaacNietoG.github.io&#x2F;blog&#x2F;250410AttacktiveWriteup&#x2F;" />
+
+  <!-- Head inject -->
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header
+  class="header fixed top-0 z-40 mx-auto min-h-[3.5rem] w-full"
+>
+  <div class="mx-auto w-full max-w-4xl p-3 lg:flex lg:justify-between">
+    <div class="flex justify-between">
+      <div class="flex items-center">
+        <a class="text-2xl font-semibold" href="https://IsaacNietoG.github.io">Tchai&#x27;s Halls of Reflection</a>
+        <div
+          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] [background:url(./icons/theme.svg)_left_center/cover_no-repeat] dark:invert dark:[background-position:right]"
+          role="button"
+          aria-label="Dark"
+        ></div>
+      </div>
+      
+      <div
+        class="btn-menu relative z-50 flex h-8 w-8 shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+        role="button"
+        aria-label="Menu"
+      ></div>
+      
+    </div>
+    <script>
+      // base
+      const htmlClass = document.documentElement.classList;
+      setTimeout(() => {
+        htmlClass.remove("not-ready");
+      }, 10);
+
+      // mobile menu
+      const btnMenu = document.querySelector(".btn-menu");
+      btnMenu?.addEventListener("click", () => {
+        htmlClass.toggle("open");
+      });
+
+      // dark theme
+      const setDark = (isDark) => {
+        if (isDark) {
+          document.body.dispatchEvent(new CustomEvent("set-theme", { detail: "dark" }));
+          htmlClass.add("dark");
+        } else {
+          document.body.dispatchEvent(new CustomEvent("set-theme", { detail: "light" }));
+          htmlClass.remove("dark");
+        }
+        localStorage.setItem("dark", isDark);
+      };
+
+      // init
+      const darkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+      if (htmlClass.contains("dark")) {
+        setDark(true);
+      } else {
+        const darkVal = localStorage.getItem("dark");
+        setDark(darkVal ? darkVal === "true" : darkScheme.matches);
+      }
+
+      // listen system
+      darkScheme.addEventListener("change", (event) => {
+        setDark(event.matches);
+      });
+
+      // manual switch
+      const btnDark = document.querySelector(".btn-dark");
+      btnDark.addEventListener("click", () => {
+        setDark(localStorage.getItem("dark") !== "true");
+      });
+    </script>
+    
+    <nav class="flex w-full items-center lg:w-auto">
+      <ul
+        class="nav-wrapper flex w-full flex-col py-2 lg:w-auto lg:flex-row lg:self-center lg:py-0"
+      >
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://IsaacNietoG.github.io/portfolio"
+            >Portfolio</a
+          >
+        </li>
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://IsaacNietoG.github.io/blog"
+            >Blog</a
+          >
+        </li>
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://IsaacNietoG.github.io/about"
+            >About</a
+          >
+        </li>
+        
+      </ul>
+      <!-- Header Nav inject -->
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <!-- Body Start inject -->
+    
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl break-words px-4 pb-16 pt-32 dark:prose-invert prose-pre:rounded-lg prose-img:rounded-lg"
+    >
+      
+<article>
+  <!-- Page Start inject -->
+  
+
+  <header class="mb-16">
+    <h1 class="!my-0 pb-2.5">Writeup para Attacktive Directory - TryHackMe</h1>
+    <div class="text-sm antialiased opacity-60">
+  
+  <time>2025-04-10</time>
+  <span class="mx-1">&middot;</span>
+  <span>7min</span>
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  
+  <span class="mx-1">&middot;</span>
+  <span>IsaacNietoG</span>
+  
+  <!-- Page Info inject -->
+  
+</div>
+
+  </header>
+
+  
+
+  <!-- TOC -->
+  <!---->
+<div class="block-bg mb-12 flex rounded-lg p-2 text-lg">
+  <details>
+    <summary class="cursor-pointer py-1 pl-4">
+      <span>Table of Contents</span>
+    </summary>
+    <div class="px-2">
+      <ul>
+        
+        <li>
+          <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250410AttacktiveWriteup/#attacktive-directory-anotaciones"
+            >Attacktive Directory Anotaciones</a
+          >
+          
+          <ul>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250410AttacktiveWriteup/#tarea-1-deploy-the-machine"
+                >Tarea 1: Deploy the machine</a
+              >
+            </li>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250410AttacktiveWriteup/#tarea-2-setup"
+                >Tarea 2: Setup</a
+              >
+            </li>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250410AttacktiveWriteup/#task-3-welcome-to-attacktive-directory"
+                >Task 3: Welcome to Attacktive Directory</a
+              >
+            </li>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250410AttacktiveWriteup/#task-4-enumerating-users-via-kerberos"
+                >Task 4: Enumerating Users via Kerberos</a
+              >
+            </li>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250410AttacktiveWriteup/#task-5-abusing-kerberos"
+                >Task 5: Abusing Kerberos</a
+              >
+            </li>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250410AttacktiveWriteup/#task-6-back-to-the-basics"
+                >Task 6: Back to the basics</a
+              >
+            </li>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250410AttacktiveWriteup/#task-7-elevating-privileges-within-the-domain"
+                >Task 7: Elevating Privileges within the Domain</a
+              >
+            </li>
+            
+          </ul>
+          
+        </li>
+        
+      </ul>
+    </div>
+  </details>
+</div>
+
+<!---->
+
+  <!-- Content -->
+  <section><h1 id="attacktive-directory-anotaciones">Attacktive Directory Anotaciones</h1>
+<p>Esto comienza como una colección de apuntes sobre la máquina Attacktive Directory que vamos a realizar en Pumahat para aprender sobre Active Directory. Idealmente podría evolucionar a ser un writeup, si <del>dejo de ser un procrastinador</del> puedo darle un formato que me sea satisfactorio, por ahora, solo son anotaciones útiles para dar la clase.</p>
+<h2 id="tarea-1-deploy-the-machine">Tarea 1: Deploy the machine</h2>
+<p>Esta parte es trivial, solamente nos explica sobre cómo conectarnos a la máquina del laboratorio mediante la VPN de THM, si ya haz hecho máquinas de THM entoces esto es conocido para ti.</p>
+<h2 id="tarea-2-setup">Tarea 2: Setup</h2>
+<p>Aqui vamos a preparar las herramientas que vamos a utilizar para este laboratorio. Es aqui donde podemos empezar a señalar ciertos detalles para cada una de las herramientas que vamos a utilizar en el laboratorio y particularidades que podemos señalar.</p>
+<p>Voy a asumir que estás usando Kali.</p>
+<h3 id="impacket">Impacket</h3>
+<p>Vamos a empezar por lo dificil, Impacket es una colección de herramientas escritas en Python con las que podemos trabajar con ciertos portocolos de red, particularmente para nuestro uso actual: con SMB y MSRPC</p>
+<p>Las instrucciones para instalar Impacket que están declaradas en esta sección no se pueden seguir para Kali, porque las dependencias de Python de Kali son manejadas por el sistema operativo. Esto significa que no podremos ni siquiera instalar las dependencias necesarias, mucho menos el paquete en sí.</p>
+<p>Esto de que los entornos de Python estén manejados por el sistema es algo cada vez en mayor uso por más distribuciones de Linux, y la solución tradicional es crear un entorno virtual en Python desde el cual correríamos el paquete, sin modificar la instalación de Python del sistema.</p>
+<p>Para instalar Impacket, en su lugar vamos a usar pipx, el cual es una herramienta de linea de comandos que se va a encargar por nosotros de esto del entorno virtual y todo lo demás, y además existe ya en los repositorios de Kali por lo que nos es conveniente usarla.</p>
+<p>Para instalar pipx:</p>
+<pre><code>sudo apt install python-pipx
+</code></pre>
+<p>Y luego, usando pipx:</p>
+<pre><code>pipx install impacket
+</code></pre>
+<p>Con esto tendremos instalado Impacket y podemos continuar.</p>
+<h3 id="bloodhound-y-neo4j">Bloodhound y Neo4J</h3>
+<p>Estas herramientas se pueden instalar tal y como dice el laboratorio.</p>
+<h3 id="extra-kerbrute">Extra: Kerbrute</h3>
+<p>Vamos a usar kerbrute más adelante, entonces pues me parece adecuado que de una vez la descarguemos.
+Kerbrute es compilada y hasta donde pude averiguar en una instalación de Kali tradicional, es portable, entonces en realidad no necesitamos otra cosa que descargar su ultima release del repositorio oficial, este ejecutable nos sirve sin problemas.</p>
+<p>https://github.com/ropnop/kerbrute</p>
+<h2 id="task-3-welcome-to-attacktive-directory">Task 3: Welcome to Attacktive Directory</h2>
+<p>Esta es la primera parte de enumeración, aquí vamos a enumerar la máquina para ver qué puertos tenemos abiertos y cierta información sobre el dominio que podemos recuperar desde ya con los scripts de nmap y una herramienta llamada enum4linux (que viene por default en Kali)</p>
+<p>El comando sugerido es</p>
+<pre><code>nmap -Pn -T4 -A -p- $IPDELAMAQUINA
+</code></pre>
+<p>Con este comando correremos todos los scripts de reconocimiento de nmap, en todos los puertos, a la máxima velocidad posible, por lo que podremos obtener toda la info que nos podrá proporcionar nmap.</p>
+<p>Te sugiero que guardes la información obtenida por este nmap, porque aquí vamos a encontrar otras cosillas que necesitaremos más adelante.</p>
+<p>Por lo pronto, observemos que estan abiertos los puertos 139 y 445. Estos son puertos para el servicio SMB, vamos a ver que información obtenemos con</p>
+<pre><code>enum4linux $IPDELAMAQUINA
+</code></pre>
+<p>De aquí obtendremos el nombre NetBIOS de dominio de la máquina. Aquí ya llevaremos dos respuestas a las preguntas.</p>
+<p>La tercera respuesta es .local</p>
+<p>Esto porque la recomendación de Microsoft para dominios de Active Directory (y la buena práctica) es usar dominios registrados que tengamos bajo posesión, y el TLD .local no es válido en la ICANN.</p>
+<h2 id="task-4-enumerating-users-via-kerberos">Task 4: Enumerating Users via Kerberos</h2>
+<p>Es aqui donde entra al spotlight nuestro querido Kerbrute, el cual es una herramienta que nos permite bruteforcear y enumerar a través de la preautenticación (AS_REQ y AS_REP)</p>
+<p>Primero nos interesa enumerar nombres de usuario válidos, para esto vamos a descargar la lista de posibles usuarios y usarla para correr kerbrute.</p>
+<pre><code>kerbrute userenum --dc $IPDELAMAQUINA -d $NOMBREDELDOMINIO userlist.txt
+</code></pre>
+<p>El nombre del dominio lo obtuvimos durante el escaneo con nmap, lo vas a poder encontrar en la información obtenida sobre el servicio que está corriendo en el puerto 389.</p>
+<p>Cuando comencemos a enumerar, rápidamente nos vamos a encontrar con dos cuentas interesantes: svc-admin y backup.</p>
+<p>La primera es una cuenta de servicio que se usa para ejecutar servicios (apoco?). La segunda es una cuenta de backup, generalmente las cuentas backup tienen privilegios interesantes que podemos aprovechar a nuestro favor, vamos a considerar estas dos cuentas.</p>
+<h2 id="task-5-abusing-kerberos">Task 5: Abusing Kerberos</h2>
+<p>Esta tarea nos consiste de buscar si alguna de las cuentas encontradas es vulnerable a ASREPRoasting, para esto vamos a usar una herramienta que nos provee Impacket llamada GetNPUsers.py</p>
+<p>ASREPRoast (Authentication Service Request Roasting) es un método que permite a un atacante solicitar un ticket de autenticación Kerberos (específicamente, un TGT - Ticket Granting Ticket) para cuentas de usuario que tienen deshabilitada la preautenticación. Luego, el atacante puede extraer un hash de la contraseña de ese ticket y intentar descifrarlo offline, sin necesidad de interactuar repetidamente con el dominio.</p>
+<p>Vamos a probarla con las dos cuentas interesantes que señalamos previamente</p>
+<pre><code>GetNPUsers.py -no-pass -usersfile usuarios -dc-ip $IPDELAMAQUINA thm-ad&#x2F;
+</code></pre>
+<p>svc-admin es vulnerable a ASREPRoasting y nos dará su hash correspondiente. Vamos a investigar un poco sobre el hash y lo quebraremos con Hashcat y la lista de contraseñas suministrada en la tarea previa.</p>
+<pre><code>hashcat -m 18200 hash passwordlist.txt
+</code></pre>
+<p>Ahora tenemos una cuenta de servicio con todo y contraseña.</p>
+<h2 id="task-6-back-to-the-basics">Task 6: Back to the basics</h2>
+<p>Con esta cuenta obtenida podemos enumerar los shares a los que tenemos acceso.</p>
+<pre><code>smbclient -L \\\\$IPDELAMAQUINA -U &#x27;svc-admin&#x27;
+</code></pre>
+<p>Nos pedirá la contraseña, que ya sabemos por el paso previo.</p>
+<p>Al listar los shares nos llamará la atención rápidamente el disco backup. Veremos su contenido con</p>
+<pre><code>smbclient \\\\$IPDELAMAQUINA\\backup -U &#x27;svc-admin&#x27;
+</code></pre>
+<p>Aqui encontraremos un archivo de texto interesante, recuperemoslo con</p>
+<pre><code>get backup\_credentials.txt
+</code></pre>
+<p>Y luego</p>
+<pre><code>exit
+</code></pre>
+<p>Si vemos el contenido de este archivo veremos que es un base64, lo decodificaremos y adentro encontraremos que es el usuario backup y su contraseña.</p>
+<h2 id="task-7-elevating-privileges-within-the-domain">Task 7: Elevating Privileges within the Domain</h2>
+<p>Es aquí donde entra en juego el hecho de que ahora tenemos acceso al usuario backup.</p>
+<p>Este usuario tiene el derecho a solicitar sincronizaciones de la base de datos del domain controller. Esto lo explotaremos para dumpear los hashes de las cuentas de este dominio usando DRSUAPI</p>
+<p>DRSUAPI es una interfaz de programación (API) utilizada por los controladores de dominio para replicar datos entre sí en un entorno de AD.</p>
+<p>Esta API permite acceder a los datos almacenados en NTDS.DIT como parte del proceso legítimo de sincronización entre DCs.</p>
+<p>Sin embargo, puede ser abusada por atacantes o herramientas de pentesting para "dumpear" (extraer) el contenido de NTDS.DIT sin necesidad de detener el servicio de AD o acceder directamente al archivo en disco.</p>
+<p>A grosso modo, vamos a impersonarnos como otro Domain Controller y solicitarle al DC real que nos de la base de datos, mediante este mecanismo de replicación completamente legítimo.</p>
+<p>Esto está completamente automatizado con otra herramienta de Impacket llamada secretsdump.py</p>
+<pre><code>secretsdump.py -just-dc backup@$IPDELAMAQUINA
+</code></pre>
+<p>Y una vez teniendo los hashes de las contraseñas de todos los usuarios del dominio, podemos rifarnos un chulo pass the hash.</p>
+<p>Logeamos en la máquina como Administrator usando</p>
+<pre><code>evil-winrm -i $IPDELAMAQUINA -u administrator -H hashObtenido
+</code></pre>
+<p>Oficialmente we are in, tenemos una sesión de powershell de administrador con la cual obtendremos el resto de banderas, las cuales se encuentran en los escritorios de cada usuario.</p>
+</section>
+
+  <hr />
+
+  <!-- Post Taxonomies -->
+  
+<!---->
+
+  <!-- Post Nav -->
+  
+<!---->
+
+  <!-- Comment -->
+  
+
+  <!-- Page End inject -->
+  
+</article>
+
+    </main>
+
+    <footer class="mx-auto flex max-w-3xl flex-wrap items-center px-8 py-4 text-sm opacity-60">
+  <div class="mr-auto basis-full lg:basis-1/2">
+    <!---->
+    <!---->
+    &copy; 2025<!---->
+    
+    <a class="link" href="https://IsaacNietoG.github.io">
+      IsaacNietoG
+    </a>
+    
+  </div>
+  <div class="flex basis-full lg:basis-1/2 lg:justify-end">
+    <a class="link mr-6 lg:ml-6" href="https://www.getzola.org/" rel="noopener" target="_blank">
+      Powered by Zola
+    </a>
+    <a class="link" href="https://github.com/st1020/kita" rel="noopener" target="_blank">✎ Kita</a>
+  </div>
+  <!-- Footer inject -->
+  
+</footer>
+
+
+    <!-- Body End inject -->
+    
+  </body>
+</html>
