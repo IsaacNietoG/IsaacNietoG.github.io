@@ -1,0 +1,380 @@
+<!doctype html>
+<html class="not-ready lg:text-base" lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Title -->
+  <title>
+    Road to HackMex: Dia 5 - exhibit - Tchai&#x27;s Halls of Reflection
+  </title>
+
+  <!-- Meta -->
+  <meta name="theme-color" />
+
+  
+  <!-- Author -->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  <meta name="description" content="Quinta máquina del entrenamiento para Hackmex" />
+  <meta name="author" content="IsaacNietoG" />
+  <!-- The Open Graph protocol -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Road to HackMex: Dia 5 - exhibit" />
+  <meta property="og:site_name" content="Tchai&#x27;s Halls of Reflection" />
+  <meta property="og:description" content="Quinta máquina del entrenamiento para Hackmex" />
+  <meta property="og:url" content="https:&#x2F;&#x2F;IsaacNietoG.github.io&#x2F;blog&#x2F;250625hackmex2025&#x2F;" />
+  
+  <!---->
+  
+  <!---->
+  
+
+  <!-- CSS & JS -->
+  <link rel="preload stylesheet" as="style" href="https://IsaacNietoG.github.io/main.css" />
+  <style>
+    :root {
+      --bg: #f4f4f5;
+      --bg-dark: #18181b;
+      --header: #e4e4e7;
+      --header-dark: #27272a;
+    }
+  </style>
+
+  
+
+  <!-- Dark Icon -->
+  <link rel="preload" as="image" href="https://IsaacNietoG.github.io/icons/theme.svg" />
+
+  <!-- Math -->
+  
+  <!---->
+
+  <!-- Mermaid -->
+  
+  <!---->
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://IsaacNietoG.github.io/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://IsaacNietoG.github.io/apple-touch-icon.png" />
+
+  <!-- Feeds -->
+  
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https:&#x2F;&#x2F;IsaacNietoG.github.io&#x2F;blog&#x2F;250625hackmex2025&#x2F;" />
+
+  <!-- Head inject -->
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header
+  class="header fixed top-0 z-40 mx-auto min-h-[3.5rem] w-full"
+>
+  <div class="mx-auto w-full max-w-4xl p-3 lg:flex lg:justify-between">
+    <div class="flex justify-between">
+      <div class="flex items-center">
+        <a class="text-2xl font-semibold" href="https://IsaacNietoG.github.io">Tchai&#x27;s Halls of Reflection</a>
+        <div
+          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] [background:url(./icons/theme.svg)_left_center/cover_no-repeat] dark:invert dark:[background-position:right]"
+          role="button"
+          aria-label="Dark"
+        ></div>
+      </div>
+      
+      <div
+        class="btn-menu relative z-50 flex h-8 w-8 shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+        role="button"
+        aria-label="Menu"
+      ></div>
+      
+    </div>
+    <script>
+      // base
+      const htmlClass = document.documentElement.classList;
+      setTimeout(() => {
+        htmlClass.remove("not-ready");
+      }, 10);
+
+      // mobile menu
+      const btnMenu = document.querySelector(".btn-menu");
+      btnMenu?.addEventListener("click", () => {
+        htmlClass.toggle("open");
+      });
+
+      // dark theme
+      const setDark = (isDark) => {
+        if (isDark) {
+          document.body.dispatchEvent(new CustomEvent("set-theme", { detail: "dark" }));
+          htmlClass.add("dark");
+        } else {
+          document.body.dispatchEvent(new CustomEvent("set-theme", { detail: "light" }));
+          htmlClass.remove("dark");
+        }
+        localStorage.setItem("dark", isDark);
+      };
+
+      // init
+      const darkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+      if (htmlClass.contains("dark")) {
+        setDark(true);
+      } else {
+        const darkVal = localStorage.getItem("dark");
+        setDark(darkVal ? darkVal === "true" : darkScheme.matches);
+      }
+
+      // listen system
+      darkScheme.addEventListener("change", (event) => {
+        setDark(event.matches);
+      });
+
+      // manual switch
+      const btnDark = document.querySelector(".btn-dark");
+      btnDark.addEventListener("click", () => {
+        setDark(localStorage.getItem("dark") !== "true");
+      });
+    </script>
+    
+    <nav class="flex w-full items-center lg:w-auto">
+      <ul
+        class="nav-wrapper flex w-full flex-col py-2 lg:w-auto lg:flex-row lg:self-center lg:py-0"
+      >
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://IsaacNietoG.github.io/portfolio"
+            >Portfolio</a
+          >
+        </li>
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://IsaacNietoG.github.io/blog"
+            >Blog</a
+          >
+        </li>
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://IsaacNietoG.github.io/about"
+            >About</a
+          >
+        </li>
+        
+      </ul>
+      <!-- Header Nav inject -->
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <!-- Body Start inject -->
+    
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl break-words px-4 pb-16 pt-32 dark:prose-invert prose-pre:rounded-lg prose-img:rounded-lg"
+    >
+      
+<article>
+  <!-- Page Start inject -->
+  
+
+  <header class="mb-16">
+    <h1 class="!my-0 pb-2.5">Road to HackMex: Dia 5 - exhibit</h1>
+    <div class="text-sm antialiased opacity-60">
+  
+  <time>2025-06-25</time>
+  <span class="mx-1">&middot;</span>
+  <span>4min</span>
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  
+  <span class="mx-1">&middot;</span>
+  <span>IsaacNietoG</span>
+  
+  <!-- Page Info inject -->
+  
+</div>
+
+  </header>
+
+  
+
+  <!-- TOC -->
+  <!---->
+<div class="block-bg mb-12 flex rounded-lg p-2 text-lg">
+  <details>
+    <summary class="cursor-pointer py-1 pl-4">
+      <span>Table of Contents</span>
+    </summary>
+    <div class="px-2">
+      <ul>
+        
+        <li>
+          <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250625hackmex2025/#writeup-exhibit-echoctf"
+            >Writeup: exhibit - echoCTF</a
+          >
+          
+          <ul>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250625hackmex2025/#informacion-general"
+                >Información General</a
+              >
+            </li>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250625hackmex2025/#descripcion-de-la-maquina"
+                >Descripción de la máquina</a
+              >
+            </li>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250625hackmex2025/#enumeracion"
+                >Enumeración</a
+              >
+            </li>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250625hackmex2025/#explotacion"
+                >Explotación</a
+              >
+            </li>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250625hackmex2025/#escalacion-de-privilegios"
+                >Escalación de Privilegios</a
+              >
+            </li>
+            
+          </ul>
+          
+        </li>
+        
+      </ul>
+    </div>
+  </details>
+</div>
+
+<!---->
+
+  <!-- Content -->
+  <section><h1 id="writeup-exhibit-echoctf">Writeup: exhibit - echoCTF</h1>
+<h2 id="informacion-general">Información General</h2>
+<p><img src="/images/blog/Screenshot_20250624_140246.png" alt="" /></p>
+<h2 id="descripcion-de-la-maquina">Descripción de la máquina</h2>
+<p>We present to you exhibit VI, what you'll do with it is up to you.</p>
+<h2 id="enumeracion">Enumeración</h2>
+<h3 id="escaneo-inicial">Escaneo Inicial</h3>
+<p>El nmap nos marca servicio SSH y HTTP. En HTTP nos da el indicio de que tenemos un TinyWebGallery.</p>
+<p><img src="/images/blog/Screenshot_20250624_100318.png" alt="" /></p>
+<h3 id="analisis-de-servicios">Análisis de Servicios</h3>
+<p>Dentro de TinyWebGallery la vemos recien configurada, no hay descripciones cambiadas. Su versión es 2.6</p>
+<p><img src="/images/blog/Screenshot_20250624_100439.png" alt="" /></p>
+<p>Encontramos también un panel de login al cual le tiro las defaults más poderosas que me sé pero no cede, tons le dejo de insistir x ahí.</p>
+<h2 id="explotacion">Explotación</h2>
+<h3 id="busqueda-de-vulnerabilidades">Busqueda de vulnerabilidades</h3>
+<p>Si buscamos un exploit nos da uno para 2.5, podríamos probarlo a ver si jala</p>
+<p><a href="https://www.exploit-db.com/exploits/51443">TinyWebGallery v2.5 - Remote Code Execution (RCE) - PHP webapps Exploit</a></p>
+<p>Pero necesitamos credenciales de admin. Ya de paso veo en la explicación del exploit que el panel que encontramos en el paso anterior no era el necesario, el que necesitamos está en /admin jjj</p>
+<h3 id="explotacion-1">Explotación</h3>
+<p><a href="https://www.tinywebgallery.com/forum/php-photo-gallery-admin-f10/default-admin-password-t1246.html">Default Admin Password : TWG Admin</a></p>
+<p>Según este sitio, las credenciales vienen en un readme.txt o en la guía de instalación de la herramienta. Como somos huevones, vamos a ver si de pura casualidad tenemos el readme.txt expuesto, que debería de estar en /admin/readme.txt</p>
+<p><img src="/images/blog/Screenshot_20250624_100840.png" alt="" /></p>
+<p>Y efectivamente, encontramos el archivo disponible para lectura y ahí podemos encontrar las credenciales por default, las cuales son:</p>
+<p>admin:twg_admin</p>
+<p>Una vez dentro, intentamos seguir el exploit y subimos nuestra payload .phar, la cual en este caso la hice que directamente abriera el netcat hacia mi IP; porque eventualmente uno se cansa de las web shells y quiere empezar directamente en los putazos jajaj.</p>
+<p><img src="/images/blog/Screenshot_20250624_104042.png" alt="" /></p>
+<p>El payload se encontrará en la raíz; ponemos nuestro netcat a la escucha y lo ejecutamos. We are in. Y como tenemos prisa, directamente upgradeamos shell y canjeamos la bandera de /etc/passwd.</p>
+<p><img src="/images/blog/Screenshot_20250624_101611.png" alt="" />
+<img src="/images/blog/Screenshot_20250624_101817.png" alt="" /></p>
+<p>También de una vez podemos sacar la bandera de env</p>
+<h2 id="escalacion-de-privilegios">Escalación de Privilegios</h2>
+<h3 id="analisis">Análisis</h3>
+<p>Una vez dentro, corremos sudo -l por fuerza de hábito para ver qué podemos hacer y vemos que podemos correr /usr/bin/vi vimit con permisos de sudo sin contraseña, pero también con la bandera NOEXEC. Mucho ojo a este ultimo dato cuate.</p>
+<p><img src="/images/blog/Screenshot_20250624_101932.png" alt="" /></p>
+<p>Si buscamos en GTFOBins qué podemos hacer con esto, nos daremos cuenta de que esta flag NOEXEC nos pone el pie para poder usar cualquier cosa de ahí, porque nos impide spawnear un shell desde adentro, que es la sugerencia que nos da GTFOBins</p>
+<p><a href="https://gtfobins.github.io/gtfobins/vi/">vi | GTFOBins</a></p>
+<p>Pero, en mi experiencia, tener vi o emacs con derechos de sudo es como tener un sudo libre por el mundo, porque ambos editores son bastante poderosos y tienen tantas funciones ocultas que tal vez ni sus creadores conocen, así que tal vez si buscamos en su documentación podemos encontrar algo útil.</p>
+<p>Y pues después de googlear un rato me encontré con esto, que no está en la documentación de vi, está en la de vim, pero equis.</p>
+<p><a href="https://vimhelp.org/editing.txt.html#edit-a-file">Vim: editing.txt</a></p>
+<p>La cual nos dice que con el comando :e {file} podemos cambiar de archivo una vez dentro de vi. Con esto ya tenemos carta libre, pues ahora tenemos forma de ver y modificar cualquier archivo de texto en la máquina. Esto nos abre muchas puertas tal como:</p>
+<ul>
+<li>Meter nuestra llave publica en /root/.ssh/authorized_keys</li>
+<li>Quitarle la contraseña a root con /etc/passwd</li>
+<li>Volcar de una vez las banderas que queramos, sin escalar privilegios (?</li>
+</ul>
+<h3 id="explotacion-2">Explotación</h3>
+<p>Y yo intenté la tercera porque pues las prisas. Con la flag en /etc/shadow no hubo problema, pues es accesible directamente. Pero para la bandera de /root/ETSTCTF_<strong>REDACTED</strong> me encontré con el problema obvio de que la bandera no se encuentra dentro de un archivo conocido, el nombre del archivo es la bandera en sí.</p>
+<p>Entonces, para las prisas, lo que se me ocurrió fue agregar la siguiente entrada a /etc/sudoers</p>
+<pre><code>www-data ALL=(ALL:ALL) NOPASSWD:ALL
+</code></pre>
+<p>Con esta, podré temporalmente correr cualquier comando como sudo. En este caso y para terminar, un rico y poderoso:</p>
+<pre><code>sudo ls -la &#x2F;root
+</code></pre>
+<p><img src="/images/blog/Screenshot_20250624_103323.png" alt="" /></p>
+<p><strong>headshot</strong></p>
+</section>
+
+  <hr />
+
+  <!-- Post Taxonomies -->
+  
+<!---->
+
+  <!-- Post Nav -->
+  
+<!---->
+
+  <!-- Comment -->
+  
+
+  <!-- Page End inject -->
+  
+</article>
+
+    </main>
+
+    <footer class="mx-auto flex max-w-3xl flex-wrap items-center px-8 py-4 text-sm opacity-60">
+  <div class="mr-auto basis-full lg:basis-1/2">
+    <!---->
+    <!---->
+    &copy; 2025<!---->
+    
+    <a class="link" href="https://IsaacNietoG.github.io">
+      IsaacNietoG
+    </a>
+    
+  </div>
+  <div class="flex basis-full lg:basis-1/2 lg:justify-end">
+    <a class="link mr-6 lg:ml-6" href="https://www.getzola.org/" rel="noopener" target="_blank">
+      Powered by Zola
+    </a>
+    <a class="link" href="https://github.com/st1020/kita" rel="noopener" target="_blank">✎ Kita</a>
+  </div>
+  <!-- Footer inject -->
+  
+</footer>
+
+
+    <!-- Body End inject -->
+    
+  </body>
+</html>

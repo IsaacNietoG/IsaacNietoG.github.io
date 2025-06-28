@@ -1,0 +1,386 @@
+<!doctype html>
+<html class="not-ready lg:text-base" lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Title -->
+  <title>
+    Road to HackMex: Dia 7 - flatliner - Tchai&#x27;s Halls of Reflection
+  </title>
+
+  <!-- Meta -->
+  <meta name="theme-color" />
+
+  
+  <!-- Author -->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  <meta name="description" content="Septima máquina del entrenamiento para Hackmex" />
+  <meta name="author" content="IsaacNietoG" />
+  <!-- The Open Graph protocol -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Road to HackMex: Dia 7 - flatliner" />
+  <meta property="og:site_name" content="Tchai&#x27;s Halls of Reflection" />
+  <meta property="og:description" content="Septima máquina del entrenamiento para Hackmex" />
+  <meta property="og:url" content="https:&#x2F;&#x2F;IsaacNietoG.github.io&#x2F;blog&#x2F;250627hackmex2025&#x2F;" />
+  
+  <!---->
+  
+  <!---->
+  
+
+  <!-- CSS & JS -->
+  <link rel="preload stylesheet" as="style" href="https://IsaacNietoG.github.io/main.css" />
+  <style>
+    :root {
+      --bg: #f4f4f5;
+      --bg-dark: #18181b;
+      --header: #e4e4e7;
+      --header-dark: #27272a;
+    }
+  </style>
+
+  
+
+  <!-- Dark Icon -->
+  <link rel="preload" as="image" href="https://IsaacNietoG.github.io/icons/theme.svg" />
+
+  <!-- Math -->
+  
+  <!---->
+
+  <!-- Mermaid -->
+  
+  <!---->
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://IsaacNietoG.github.io/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://IsaacNietoG.github.io/apple-touch-icon.png" />
+
+  <!-- Feeds -->
+  
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https:&#x2F;&#x2F;IsaacNietoG.github.io&#x2F;blog&#x2F;250627hackmex2025&#x2F;" />
+
+  <!-- Head inject -->
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header
+  class="header fixed top-0 z-40 mx-auto min-h-[3.5rem] w-full"
+>
+  <div class="mx-auto w-full max-w-4xl p-3 lg:flex lg:justify-between">
+    <div class="flex justify-between">
+      <div class="flex items-center">
+        <a class="text-2xl font-semibold" href="https://IsaacNietoG.github.io">Tchai&#x27;s Halls of Reflection</a>
+        <div
+          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] [background:url(./icons/theme.svg)_left_center/cover_no-repeat] dark:invert dark:[background-position:right]"
+          role="button"
+          aria-label="Dark"
+        ></div>
+      </div>
+      
+      <div
+        class="btn-menu relative z-50 flex h-8 w-8 shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+        role="button"
+        aria-label="Menu"
+      ></div>
+      
+    </div>
+    <script>
+      // base
+      const htmlClass = document.documentElement.classList;
+      setTimeout(() => {
+        htmlClass.remove("not-ready");
+      }, 10);
+
+      // mobile menu
+      const btnMenu = document.querySelector(".btn-menu");
+      btnMenu?.addEventListener("click", () => {
+        htmlClass.toggle("open");
+      });
+
+      // dark theme
+      const setDark = (isDark) => {
+        if (isDark) {
+          document.body.dispatchEvent(new CustomEvent("set-theme", { detail: "dark" }));
+          htmlClass.add("dark");
+        } else {
+          document.body.dispatchEvent(new CustomEvent("set-theme", { detail: "light" }));
+          htmlClass.remove("dark");
+        }
+        localStorage.setItem("dark", isDark);
+      };
+
+      // init
+      const darkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+      if (htmlClass.contains("dark")) {
+        setDark(true);
+      } else {
+        const darkVal = localStorage.getItem("dark");
+        setDark(darkVal ? darkVal === "true" : darkScheme.matches);
+      }
+
+      // listen system
+      darkScheme.addEventListener("change", (event) => {
+        setDark(event.matches);
+      });
+
+      // manual switch
+      const btnDark = document.querySelector(".btn-dark");
+      btnDark.addEventListener("click", () => {
+        setDark(localStorage.getItem("dark") !== "true");
+      });
+    </script>
+    
+    <nav class="flex w-full items-center lg:w-auto">
+      <ul
+        class="nav-wrapper flex w-full flex-col py-2 lg:w-auto lg:flex-row lg:self-center lg:py-0"
+      >
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://IsaacNietoG.github.io/portfolio"
+            >Portfolio</a
+          >
+        </li>
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://IsaacNietoG.github.io/blog"
+            >Blog</a
+          >
+        </li>
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://IsaacNietoG.github.io/about"
+            >About</a
+          >
+        </li>
+        
+      </ul>
+      <!-- Header Nav inject -->
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <!-- Body Start inject -->
+    
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl break-words px-4 pb-16 pt-32 dark:prose-invert prose-pre:rounded-lg prose-img:rounded-lg"
+    >
+      
+<article>
+  <!-- Page Start inject -->
+  
+
+  <header class="mb-16">
+    <h1 class="!my-0 pb-2.5">Road to HackMex: Dia 7 - flatliner</h1>
+    <div class="text-sm antialiased opacity-60">
+  
+  <time>2025-06-27</time>
+  <span class="mx-1">&middot;</span>
+  <span>4min</span>
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  
+  <span class="mx-1">&middot;</span>
+  <span>IsaacNietoG</span>
+  
+  <!-- Page Info inject -->
+  
+</div>
+
+  </header>
+
+  
+
+  <!-- TOC -->
+  <!---->
+<div class="block-bg mb-12 flex rounded-lg p-2 text-lg">
+  <details>
+    <summary class="cursor-pointer py-1 pl-4">
+      <span>Table of Contents</span>
+    </summary>
+    <div class="px-2">
+      <ul>
+        
+        <li>
+          <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250627hackmex2025/#writeup-flatliner-echoctf"
+            >Writeup: flatliner - echoCTF</a
+          >
+          
+          <ul>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250627hackmex2025/#informacion-general"
+                >Información General</a
+              >
+            </li>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250627hackmex2025/#descripcion-de-la-maquina"
+                >Descripción de la máquina</a
+              >
+            </li>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250627hackmex2025/#enumeracion"
+                >Enumeración</a
+              >
+            </li>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250627hackmex2025/#explotacion"
+                >Explotación</a
+              >
+            </li>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250627hackmex2025/#escalacion-de-privilegios"
+                >Escalación de Privilegios</a
+              >
+            </li>
+            
+          </ul>
+          
+        </li>
+        
+      </ul>
+    </div>
+  </details>
+</div>
+
+<!---->
+
+  <!-- Content -->
+  <section><h1 id="writeup-flatliner-echoctf">Writeup: flatliner - echoCTF</h1>
+<h2 id="informacion-general">Información General</h2>
+<p><img src="/images/blog/Screenshot_20250626_123607.png" alt="" /></p>
+<h2 id="descripcion-de-la-maquina">Descripción de la máquina</h2>
+<p>Connect with purpose and elevate your potential with unmatched power.</p>
+<h2 id="enumeracion">Enumeración</h2>
+<h3 id="escaneo-inicial">Escaneo Inicial</h3>
+<p>Empezamos a escanear con nmap para ver qué servicios tenemos expuestos en la IP de la máquina.</p>
+<p>Nos marca servicio SSH en puerto 22 con versión no vulnerable (ya después de 5 días ya me ando aprendiendo las versiones jajaj) y servicio HTTP en puerto 80 con un Apache igual de invulnerable, y un servicio cuyo http-title es Flat time, conectémonos por browser pa ver q rollo</p>
+<h3 id="analisis-de-servicios">Análisis de Servicios</h3>
+<p>Dentro del sitio web vemos hospedado un CMS llamado Flatnux, del cual podemos ver información en su sitio web.</p>
+<p><a href="https://flatnux.altervista.org/installazione.en.html">Flatnux CMS</a></p>
+<p>El servicio no tiene nada y está recién salido de la caja. Inmediatamente nos encontramos un login en /index.php?mod=login al que le tiro las defaults más potentes que me sé, pero no afloja.</p>
+<p><img src="/images/blog/Screenshot_20250626_123607.png" alt="" /></p>
+<p>Entonces sigo curioseando y me doy cuenta de que hay un hipertexto en la página principal que nos lleva a un admin panel. Es ahí donde confirmo que definitivamente hay que encontrarle credenciales a este servicio, o, en su defecto, buscarle un authentication bypass si es que de plano se pone muy fea la cosa.</p>
+<p><img src="/images/blog/Screenshot_20250626_101003.png" alt="" /></p>
+<h2 id="explotacion">Explotación</h2>
+<h3 id="busqueda-de-vulnerabilidades">Busqueda de vulnerabilidades</h3>
+<p>Estaba ya preparando mi ataque por diccionario para torcerme las credenciales de admin, cuando me acordé que mi compa el ETH3RN4L nos había dicho en algún momento q una vez le tocó una máquina q nomás no aflojaba sus credenciales, y se terminó topando, ya al final de muchos intentos de frustración, con que la contraseña era el nombre de la máquina. Así que vamos a intentarlo.</p>
+<p>admin:flatliner
+<strong>admin:flatnux</strong></p>
+<p>Esooo chingao, estamos dentro.</p>
+<p><img src="/images/blog/Screenshot_20250626_110412.png" alt="" /></p>
+<p>Una vez con credenciales de administrador tenemos acceso directo a los archivos del servicio. Y por la configuración del file manager; que nos dice claramente que está ubicado en /var/www/html, y además nos muestra los archivos .php que hay, podemos asumir perfectamente que es trivial inyectar un archivo .php con una webshell, entonces eso es lo que vamos a hacer.</p>
+<h3 id="intentos-de-explotaciones">Intentos de explotaciones</h3>
+<p>En un principio subí mi webshell en /misc/media/news porque un exploit que encontré en exploitDB marcaba esa como la ubicación ideal. Pero ahora que estoy escribiendo el writeup después de terminar la máquina, me doy cuenta de que el sitio no tiene protecciones que nos impidan subir nuestra webshell directamente a la raíz.</p>
+<p>Pero bueno, en todo caso, preparamos nuestro payload y lo subimos.</p>
+<h3 id="explotacion-1">Explotación</h3>
+<p>Accedemos al mismo y pum, web shell desde el cual podemos reclamar la bandera en /etc/passwd.</p>
+<p><img src="/images/blog/Screenshot_20250626_101821.png" alt="" /></p>
+<p>Ya de uña, ponemos a escuchar nuestro netcat y le mandamos la conexión mediante este webshell. Upgradeamos y we're in</p>
+<p><img src="/images/blog/Screenshot_20250626_102007.png" alt="" /></p>
+<h2 id="escalacion-de-privilegios">Escalación de Privilegios</h2>
+<h3 id="analisis">Análisis</h3>
+<p>Inmediatamente tiramos nuestro fiel sudo -l que nos indicará que tenemos permisos de ejecutar como sudo el binario /usr/local/bin/flatline</p>
+<p>Si miramos el contenido de este binario nos podemos dar cuenta que lo único que hace es llamar un</p>
+<pre><code>cat flatliner
+</code></pre>
+<p><img src="/images/blog/Screenshot_20250626_102133.png" alt="" /></p>
+<p>Esto nos da muy buenas esperanzas, principalmente porque el comando cat no está siendo llamado por su path completo (/bin/cat), entonces ya nos está haciendo ojitos un posible PATH hijacking</p>
+<p>El cual terminamos de confirmar cuando nos damos cuenta que en el sudo -l no existe ninguna señal de un posible env_reset que nos pueda frustrar nuestros planes.</p>
+<p>Entonces, como no tenemos un env_reset en nuestras capacidades como sudo, y el comando cat no está siendo llamado por su path, tenemos casi seguro un PATH hijacking</p>
+<h3 id="explotacion-2">Explotación</h3>
+<p>Nos movemos a la carpeta /tmp - para más placer - y creamos nuestro cat pirata. el cual simplemente contendrá lo siguiente:</p>
+<pre><code>#!&#x2F;bin&#x2F;bash
+&#x2F;bin&#x2F;bash -p
+</code></pre>
+<p>Le damos permisos de ejecución con<code>chmod +x cat</code> y agregamos la carpeta /tmp a nuestro path con:</p>
+<pre><code>export PATH=&#x2F;tmp:$PATH
+</code></pre>
+<p>Y listo, corremos <code>sudo flatline</code> y efectivamente, el path hijacking fue todo un éxito</p>
+<p><img src="/images/blog/Screenshot_20250626_102519.png" alt="" /></p>
+<p>Y pues ya, rooteada.</p>
+<p>Las siguientes banderas a reclamar una vez siendo root son:</p>
+<ul>
+<li>/etc/shadow</li>
+<li>/root/ETSCTF_<strong>redacted</strong></li>
+<li>La variable de entorno en /proc/1/environ</li>
+</ul>
+<p><img src="/images/blog/Screenshot_20250626_102746.png" alt="" /></p>
+<p>Y listo. <strong>headshot</strong></p>
+</section>
+
+  <hr />
+
+  <!-- Post Taxonomies -->
+  
+<!---->
+
+  <!-- Post Nav -->
+  
+<!---->
+
+  <!-- Comment -->
+  
+
+  <!-- Page End inject -->
+  
+</article>
+
+    </main>
+
+    <footer class="mx-auto flex max-w-3xl flex-wrap items-center px-8 py-4 text-sm opacity-60">
+  <div class="mr-auto basis-full lg:basis-1/2">
+    <!---->
+    <!---->
+    &copy; 2025<!---->
+    
+    <a class="link" href="https://IsaacNietoG.github.io">
+      IsaacNietoG
+    </a>
+    
+  </div>
+  <div class="flex basis-full lg:basis-1/2 lg:justify-end">
+    <a class="link mr-6 lg:ml-6" href="https://www.getzola.org/" rel="noopener" target="_blank">
+      Powered by Zola
+    </a>
+    <a class="link" href="https://github.com/st1020/kita" rel="noopener" target="_blank">✎ Kita</a>
+  </div>
+  <!-- Footer inject -->
+  
+</footer>
+
+
+    <!-- Body End inject -->
+    
+  </body>
+</html>

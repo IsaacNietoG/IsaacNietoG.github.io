@@ -1,0 +1,386 @@
+<!doctype html>
+<html class="not-ready lg:text-base" lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Title -->
+  <title>
+    Road to HackMex: Dia 6 - webamok - Tchai&#x27;s Halls of Reflection
+  </title>
+
+  <!-- Meta -->
+  <meta name="theme-color" />
+
+  
+  <!-- Author -->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  <meta name="description" content="Sexta máquina del entrenamiento para Hackmex" />
+  <meta name="author" content="IsaacNietoG" />
+  <!-- The Open Graph protocol -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Road to HackMex: Dia 6 - webamok" />
+  <meta property="og:site_name" content="Tchai&#x27;s Halls of Reflection" />
+  <meta property="og:description" content="Sexta máquina del entrenamiento para Hackmex" />
+  <meta property="og:url" content="https:&#x2F;&#x2F;IsaacNietoG.github.io&#x2F;blog&#x2F;250626hackmex2025&#x2F;" />
+  
+  <!---->
+  
+  <!---->
+  
+
+  <!-- CSS & JS -->
+  <link rel="preload stylesheet" as="style" href="https://IsaacNietoG.github.io/main.css" />
+  <style>
+    :root {
+      --bg: #f4f4f5;
+      --bg-dark: #18181b;
+      --header: #e4e4e7;
+      --header-dark: #27272a;
+    }
+  </style>
+
+  
+
+  <!-- Dark Icon -->
+  <link rel="preload" as="image" href="https://IsaacNietoG.github.io/icons/theme.svg" />
+
+  <!-- Math -->
+  
+  <!---->
+
+  <!-- Mermaid -->
+  
+  <!---->
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://IsaacNietoG.github.io/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://IsaacNietoG.github.io/apple-touch-icon.png" />
+
+  <!-- Feeds -->
+  
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https:&#x2F;&#x2F;IsaacNietoG.github.io&#x2F;blog&#x2F;250626hackmex2025&#x2F;" />
+
+  <!-- Head inject -->
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header
+  class="header fixed top-0 z-40 mx-auto min-h-[3.5rem] w-full"
+>
+  <div class="mx-auto w-full max-w-4xl p-3 lg:flex lg:justify-between">
+    <div class="flex justify-between">
+      <div class="flex items-center">
+        <a class="text-2xl font-semibold" href="https://IsaacNietoG.github.io">Tchai&#x27;s Halls of Reflection</a>
+        <div
+          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] [background:url(./icons/theme.svg)_left_center/cover_no-repeat] dark:invert dark:[background-position:right]"
+          role="button"
+          aria-label="Dark"
+        ></div>
+      </div>
+      
+      <div
+        class="btn-menu relative z-50 flex h-8 w-8 shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+        role="button"
+        aria-label="Menu"
+      ></div>
+      
+    </div>
+    <script>
+      // base
+      const htmlClass = document.documentElement.classList;
+      setTimeout(() => {
+        htmlClass.remove("not-ready");
+      }, 10);
+
+      // mobile menu
+      const btnMenu = document.querySelector(".btn-menu");
+      btnMenu?.addEventListener("click", () => {
+        htmlClass.toggle("open");
+      });
+
+      // dark theme
+      const setDark = (isDark) => {
+        if (isDark) {
+          document.body.dispatchEvent(new CustomEvent("set-theme", { detail: "dark" }));
+          htmlClass.add("dark");
+        } else {
+          document.body.dispatchEvent(new CustomEvent("set-theme", { detail: "light" }));
+          htmlClass.remove("dark");
+        }
+        localStorage.setItem("dark", isDark);
+      };
+
+      // init
+      const darkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+      if (htmlClass.contains("dark")) {
+        setDark(true);
+      } else {
+        const darkVal = localStorage.getItem("dark");
+        setDark(darkVal ? darkVal === "true" : darkScheme.matches);
+      }
+
+      // listen system
+      darkScheme.addEventListener("change", (event) => {
+        setDark(event.matches);
+      });
+
+      // manual switch
+      const btnDark = document.querySelector(".btn-dark");
+      btnDark.addEventListener("click", () => {
+        setDark(localStorage.getItem("dark") !== "true");
+      });
+    </script>
+    
+    <nav class="flex w-full items-center lg:w-auto">
+      <ul
+        class="nav-wrapper flex w-full flex-col py-2 lg:w-auto lg:flex-row lg:self-center lg:py-0"
+      >
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://IsaacNietoG.github.io/portfolio"
+            >Portfolio</a
+          >
+        </li>
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://IsaacNietoG.github.io/blog"
+            >Blog</a
+          >
+        </li>
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://IsaacNietoG.github.io/about"
+            >About</a
+          >
+        </li>
+        
+      </ul>
+      <!-- Header Nav inject -->
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <!-- Body Start inject -->
+    
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl break-words px-4 pb-16 pt-32 dark:prose-invert prose-pre:rounded-lg prose-img:rounded-lg"
+    >
+      
+<article>
+  <!-- Page Start inject -->
+  
+
+  <header class="mb-16">
+    <h1 class="!my-0 pb-2.5">Road to HackMex: Dia 6 - webamok</h1>
+    <div class="text-sm antialiased opacity-60">
+  
+  <time>2025-06-26</time>
+  <span class="mx-1">&middot;</span>
+  <span>5min</span>
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  
+  <span class="mx-1">&middot;</span>
+  <span>IsaacNietoG</span>
+  
+  <!-- Page Info inject -->
+  
+</div>
+
+  </header>
+
+  
+
+  <!-- TOC -->
+  <!---->
+<div class="block-bg mb-12 flex rounded-lg p-2 text-lg">
+  <details>
+    <summary class="cursor-pointer py-1 pl-4">
+      <span>Table of Contents</span>
+    </summary>
+    <div class="px-2">
+      <ul>
+        
+        <li>
+          <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250626hackmex2025/#writeup-webamok-echoctf"
+            >Writeup: webamok - echoCTF</a
+          >
+          
+          <ul>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250626hackmex2025/#informacion-general"
+                >Información General</a
+              >
+            </li>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250626hackmex2025/#descripcion-de-la-maquina"
+                >Descripción de la máquina</a
+              >
+            </li>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250626hackmex2025/#enumeracion"
+                >Enumeración</a
+              >
+            </li>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250626hackmex2025/#explotacion"
+                >Explotación</a
+              >
+            </li>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250626hackmex2025/#escalacion-de-privilegios"
+                >Escalación de Privilegios</a
+              >
+            </li>
+            
+          </ul>
+          
+        </li>
+        
+      </ul>
+    </div>
+  </details>
+</div>
+
+<!---->
+
+  <!-- Content -->
+  <section><h1 id="writeup-webamok-echoctf">Writeup: webamok - echoCTF</h1>
+<h2 id="informacion-general">Información General</h2>
+<p><img src="/images/blog/Screenshot_20250626_235211.png" alt="" /></p>
+<h2 id="descripcion-de-la-maquina">Descripción de la máquina</h2>
+<p>When you're ready to give up, just make sure you dont run amok...</p>
+<h2 id="enumeracion">Enumeración</h2>
+<h3 id="escaneo-inicial">Escaneo Inicial</h3>
+<p>Corremos un nmap sobre la dirección IP que nos señala servicio SSH en el puerto 22 y servicio HTTP en el puerto 80. Ninguno de los dos corre versiones vulnerables.</p>
+<p>Extraño hacer máquinas que tengan servicios en puertos bien esotéricos lol, pero ni modo.</p>
+<p><img src="/images/blog/Screenshot_20250625_101130.png" alt="" /></p>
+<p>Bueno, también tenemos algunos servicios filtrados en otros puertos pero como es tráfico filtrado, muy rara vez nos vamos a fijar en ellos lol.</p>
+<p>Vamos a ver que nos ofrece el servicio HTTP</p>
+<h3 id="analisis-de-servicios">Análisis de Servicios</h3>
+<p>Entrando por navegador a la dirección ip de la máquina nos encontramos con un "Sitio en construcción", que además no tiene expuesto un /robots.txt para tomar de referencia, entonces le corremos un dirsearch para ver qué se cuece.</p>
+<p><img src="/images/blog/Screenshot_20250625_100919.png" alt="" />
+<img src="/images/blog/Screenshot_20250625_101047.png" alt="" /></p>
+<p>El pedo es que no le tomé screenshot al dirsearch pero bueno jaja, encontramos el panel de admin en /admin/login/ -aunque la ruta completa no es necesario descubrirla, pues /admin nos redirige-. Este panel de administración ya nos dice de una vez que el servicio hosteado se llama WBCE CMS, y comenzamos a probar contraseñas.</p>
+<p><img src="/images/blog/Screenshot_20250625_102216.png" alt="" /></p>
+<p>Aquí si se dejó con mis defaults más poderosas, porque lit jaló con admin:password JAJAJA</p>
+<p><img src="/images/blog/Screenshot_20250625_102948.png" alt="" /></p>
+<p>Una vez dentro, estamos dentro del panel de administrador por lo que podemos comenzar a buscar exploits, con la confianza de que podríamos usar un autenticado sin pedos.</p>
+<h2 id="explotacion">Explotación</h2>
+<h3 id="busqueda-de-vulnerabilidades">Busqueda de vulnerabilidades</h3>
+<p>Me encontré con las siguientes vulnerabilidades para este servicio:</p>
+<p><a href="https://www.exploit-db.com/exploits/52039">WBCE CMS v1.6.2 - Remote Code Execution (RCE) - PHP webapps Exploit</a></p>
+<p><a href="https://github.com/capture0x/WBCE_CMS">capture0x/WBCE_CMS: WBCE CMS Version : 1.6.1 Remote Command Execution</a></p>
+<p>Las dos se sirven de un file upload para lograr remote command execution, solamente que una lo sube directamente como media -como lo hemos estado viniendo haciendo desde hace ya rato- mientras que la otra se sirve de la funcionalidad de paquetes de lenguajes que tiene el CMS para subir un install.php malicioso. Por una suerte de navaja de Ockham (no porque sea huevón), siempre vamos a preferir la primera opción más simple.</p>
+<h3 id="intentos-de-explotaciones">Intentos de explotaciones</h3>
+<p>Entonces, primero intentemos con la que se sirve de subir un archivo .inc con una webshell interactiva para ver qué sale.</p>
+<p>Y no sé si fue por no haber replicado la solicitud al pié de la letra o porque de plano el servicio estaba bien configurado de este lado, pero a la hora de intentar utilizar la webshell, nos encontramos con que simplemente es inutilizable... Por más comandos que mandemos, no podemos encontrar la forma de que sean interpretados.</p>
+<p><img src="/images/blog/Screenshot_20250625_104204.png" alt="" /></p>
+<p>Entonces, vamos a comprobar si el otro funciona.</p>
+<h3 id="explotacion-1">Explotación</h3>
+<p>Vamos a probar la segunda, la cual se sirve de utilizar la funcionalidad de instalar paquetes de lenguajes que tiene el CMS.</p>
+<p>La funcionalidad de instalar lenguajes existe en /admin/languages/install.php.</p>
+<p>Aquí vamos a encontrar una subida de archivos que concretamente acepta un archivo upgrade.php, el cual en realidad puede ir cargado con nuestra payload sin tanto saldo pa no llamar la atención, pues aunque el "paquete de lenguaje" es rechazado, el código en su interior siempre es interpretado. En este caso, lo usamos para obtener la bandera de /etc/passwd</p>
+<p><img src="/images/blog/Screenshot_20250625_104118.png" alt="" />
+<img src="/images/blog/Screenshot_20250625_104128.png" alt="" /></p>
+<p>Entonces, pues le mandamos un netcat por acá y nos ponemos a la escucha. Recibiremos la conexión y we're in.</p>
+<p><img src="/images/blog/Screenshot_20250625_104257.png" alt="" /></p>
+<p>Tiramos un env para intentar sacar la bandera en las variables de entorno, que efectivamente ahí va a estar, y de paso tiramos un sudo -l para ver qué tal está el cotorreo por acá.</p>
+<h2 id="escalacion-de-privilegios">Escalación de Privilegios</h2>
+<h3 id="analisis">Análisis</h3>
+<p><img src="/images/blog/Screenshot_20250625_104319.png" alt="" /></p>
+<p>Como podemos ver, podemos correr un binario llamado amok -ya nos dió la pista la descripción de la máquina. El cual ahora vamos a analizar. Ya de paso señalamos que tenemos env_reset y secure path por lo que no sale path hijacking</p>
+<p><img src="/images/blog/Screenshot_20250625_104351.png" alt="" /></p>
+<p>Este es un script en python que se sirve de las librerías pydash y random para hacer alguna cosa rara. La neta no me voy a detener a leer el código, vámonos a los madrazos y buscar si hay alguna vulnerabilidad en estas dos librerías.</p>
+<p><a href="https://security.snyk.io/vuln/SNYK-PYTHON-PYDASH-5916518">Command Injection in pydash | CVE-2023-26145 | Snyk</a></p>
+<p>Y esta vulnerabilidad encontrada en la biblioteca pydash no es solo muy ad hoc al código. <strong>Literalmente su prueba de concepto es el código</strong></p>
+<p>Entonces pues nos lo vamos a torcer usando el mismo ejemplo de dicha PoC</p>
+<h3 id="explotacion-2">Explotación</h3>
+<p><img src="/images/blog/Screenshot_20250625_104951.png" alt="" /></p>
+<p>Aquí confirmo la escalada de privilegios mediante el binario, pero hay que recordar que el script en python solamente nos retorna el resultado del comando ejecutado, por lo que no podemos directamente invocar un /bin/bash desde aquí. Podríamos:</p>
+<ul>
+<li>Invocar un netcat</li>
+<li>Dumpear las banderas usando esta ejecución de comandos como root</li>
+</ul>
+<p>Adivinaste pa, voy a usar la segunda.</p>
+<p>El ultimo parámetro recibido es el comando a ejecutar, si lo encerramos entre comillas simples podemos ejecutar comandos de varias líneas. Primero un 'ls -la /root' y luego un 'cat /etc/shadow'</p>
+<p><img src="/images/blog/Screenshot_20250625_105004.png" alt="" /></p>
+<p><strong>headshot</strong></p>
+</section>
+
+  <hr />
+
+  <!-- Post Taxonomies -->
+  
+<!---->
+
+  <!-- Post Nav -->
+  
+<!---->
+
+  <!-- Comment -->
+  
+
+  <!-- Page End inject -->
+  
+</article>
+
+    </main>
+
+    <footer class="mx-auto flex max-w-3xl flex-wrap items-center px-8 py-4 text-sm opacity-60">
+  <div class="mr-auto basis-full lg:basis-1/2">
+    <!---->
+    <!---->
+    &copy; 2025<!---->
+    
+    <a class="link" href="https://IsaacNietoG.github.io">
+      IsaacNietoG
+    </a>
+    
+  </div>
+  <div class="flex basis-full lg:basis-1/2 lg:justify-end">
+    <a class="link mr-6 lg:ml-6" href="https://www.getzola.org/" rel="noopener" target="_blank">
+      Powered by Zola
+    </a>
+    <a class="link" href="https://github.com/st1020/kita" rel="noopener" target="_blank">✎ Kita</a>
+  </div>
+  <!-- Footer inject -->
+  
+</footer>
+
+
+    <!-- Body End inject -->
+    
+  </body>
+</html>

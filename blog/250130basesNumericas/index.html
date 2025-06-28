@@ -1,0 +1,642 @@
+<!doctype html>
+<html class="not-ready lg:text-base" lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Title -->
+  <title>
+    Sistemas de numeración y sus queveres en CC - Tchai&#x27;s Halls of Reflection
+  </title>
+
+  <!-- Meta -->
+  <meta name="theme-color" />
+
+  
+  <!-- Author -->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  <meta name="description" content="Un pequeño resumen de los varios sistemas de numeración que existen, pero enfocado a las ciencias de la computación" />
+  <meta name="author" content="IsaacNietoG" />
+  <!-- The Open Graph protocol -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sistemas de numeración y sus queveres en CC" />
+  <meta property="og:site_name" content="Tchai&#x27;s Halls of Reflection" />
+  <meta property="og:description" content="Un pequeño resumen de los varios sistemas de numeración que existen, pero enfocado a las ciencias de la computación" />
+  <meta property="og:url" content="https:&#x2F;&#x2F;IsaacNietoG.github.io&#x2F;blog&#x2F;250130basesNumericas&#x2F;" />
+  
+  <!---->
+  
+  <!---->
+  
+
+  <!-- CSS & JS -->
+  <link rel="preload stylesheet" as="style" href="https://IsaacNietoG.github.io/main.css" />
+  <style>
+    :root {
+      --bg: #f4f4f5;
+      --bg-dark: #18181b;
+      --header: #e4e4e7;
+      --header-dark: #27272a;
+    }
+  </style>
+
+  
+
+  <!-- Dark Icon -->
+  <link rel="preload" as="image" href="https://IsaacNietoG.github.io/icons/theme.svg" />
+
+  <!-- Math -->
+  
+  <!---->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css"
+  integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI"
+  crossorigin="anonymous"
+/>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js"
+  integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t"
+  crossorigin="anonymous"
+></script>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js"
+  integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+  crossorigin="anonymous"
+></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () =>
+    renderMathInElement(document.body, {
+      // customised options
+      // • auto-render specific keys, e.g.:
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+      ],
+      // • rendering keys, e.g.:
+      throwOnError: false,
+    }),
+  );
+</script>
+
+  <!---->
+  
+  <!---->
+
+  <!-- Mermaid -->
+  
+  <!---->
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://IsaacNietoG.github.io/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://IsaacNietoG.github.io/apple-touch-icon.png" />
+
+  <!-- Feeds -->
+  
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https:&#x2F;&#x2F;IsaacNietoG.github.io&#x2F;blog&#x2F;250130basesNumericas&#x2F;" />
+
+  <!-- Head inject -->
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header
+  class="header fixed top-0 z-40 mx-auto min-h-[3.5rem] w-full"
+>
+  <div class="mx-auto w-full max-w-4xl p-3 lg:flex lg:justify-between">
+    <div class="flex justify-between">
+      <div class="flex items-center">
+        <a class="text-2xl font-semibold" href="https://IsaacNietoG.github.io">Tchai&#x27;s Halls of Reflection</a>
+        <div
+          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] [background:url(./icons/theme.svg)_left_center/cover_no-repeat] dark:invert dark:[background-position:right]"
+          role="button"
+          aria-label="Dark"
+        ></div>
+      </div>
+      
+      <div
+        class="btn-menu relative z-50 flex h-8 w-8 shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+        role="button"
+        aria-label="Menu"
+      ></div>
+      
+    </div>
+    <script>
+      // base
+      const htmlClass = document.documentElement.classList;
+      setTimeout(() => {
+        htmlClass.remove("not-ready");
+      }, 10);
+
+      // mobile menu
+      const btnMenu = document.querySelector(".btn-menu");
+      btnMenu?.addEventListener("click", () => {
+        htmlClass.toggle("open");
+      });
+
+      // dark theme
+      const setDark = (isDark) => {
+        if (isDark) {
+          document.body.dispatchEvent(new CustomEvent("set-theme", { detail: "dark" }));
+          htmlClass.add("dark");
+        } else {
+          document.body.dispatchEvent(new CustomEvent("set-theme", { detail: "light" }));
+          htmlClass.remove("dark");
+        }
+        localStorage.setItem("dark", isDark);
+      };
+
+      // init
+      const darkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+      if (htmlClass.contains("dark")) {
+        setDark(true);
+      } else {
+        const darkVal = localStorage.getItem("dark");
+        setDark(darkVal ? darkVal === "true" : darkScheme.matches);
+      }
+
+      // listen system
+      darkScheme.addEventListener("change", (event) => {
+        setDark(event.matches);
+      });
+
+      // manual switch
+      const btnDark = document.querySelector(".btn-dark");
+      btnDark.addEventListener("click", () => {
+        setDark(localStorage.getItem("dark") !== "true");
+      });
+    </script>
+    
+    <nav class="flex w-full items-center lg:w-auto">
+      <ul
+        class="nav-wrapper flex w-full flex-col py-2 lg:w-auto lg:flex-row lg:self-center lg:py-0"
+      >
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://IsaacNietoG.github.io/portfolio"
+            >Portfolio</a
+          >
+        </li>
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://IsaacNietoG.github.io/blog"
+            >Blog</a
+          >
+        </li>
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://IsaacNietoG.github.io/about"
+            >About</a
+          >
+        </li>
+        
+      </ul>
+      <!-- Header Nav inject -->
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <!-- Body Start inject -->
+    
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl break-words px-4 pb-16 pt-32 dark:prose-invert prose-pre:rounded-lg prose-img:rounded-lg"
+    >
+      
+<article>
+  <!-- Page Start inject -->
+  
+
+  <header class="mb-16">
+    <h1 class="!my-0 pb-2.5">Sistemas de numeración y sus queveres en CC</h1>
+    <div class="text-sm antialiased opacity-60">
+  
+  <time>2025-01-30</time>
+  <span class="mx-1">&middot;</span>
+  <span>16min</span>
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  
+  <span class="mx-1">&middot;</span>
+  <span>IsaacNietoG</span>
+  
+  <!-- Page Info inject -->
+  
+</div>
+
+  </header>
+
+  
+
+  <!-- TOC -->
+  <!---->
+<div class="block-bg mb-12 flex rounded-lg p-2 text-lg">
+  <details>
+    <summary class="cursor-pointer py-1 pl-4">
+      <span>Table of Contents</span>
+    </summary>
+    <div class="px-2">
+      <ul>
+        
+        <li>
+          <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250130basesNumericas/#disclaimer"
+            >Disclaimer</a
+          >
+          
+        </li>
+        
+        <li>
+          <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250130basesNumericas/#introduccion"
+            >Introducción</a
+          >
+          
+          <ul>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250130basesNumericas/#que-es-un-sistema-numerico"
+                >Qué es un sistema numérico?.</a
+              >
+            </li>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250130basesNumericas/#sistemas-no-posicionales"
+                >Sistemas no posicionales</a
+              >
+            </li>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250130basesNumericas/#sistemas-posicionales"
+                >Sistemas posicionales</a
+              >
+            </li>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250130basesNumericas/#demostracion-del-teorema-fundamental-de-la-numeracion"
+                >Demostración del Teorema Fundamental de la Numeración</a
+              >
+            </li>
+            
+          </ul>
+          
+        </li>
+        
+        <li>
+          <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250130basesNumericas/#va-y-todo-esto-para-que-me-sirve-en-ciencias-de-la-computacion"
+            >Va, y todo esto para qué me sirve en Ciencias de la Computación?</a
+          >
+          
+          <ul>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250130basesNumericas/#numeros-negativos-en-binario"
+                >Números negativos en binario</a
+              >
+            </li>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250130basesNumericas/#numeros-de-punto-flotante"
+                >Números de punto flotante</a
+              >
+            </li>
+            
+          </ul>
+          
+        </li>
+        
+        <li>
+          <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250130basesNumericas/#life-hacks-y-conclusion"
+            >Life hacks y conclusión</a
+          >
+          
+          <ul>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250130basesNumericas/#mejor-hexadecimal-u-octal"
+                >Mejor hexadecimal u octal</a
+              >
+            </li>
+            
+          </ul>
+          
+        </li>
+        
+      </ul>
+    </div>
+  </details>
+</div>
+
+<!---->
+
+  <!-- Content -->
+  <section><h3 id="disclaimer">Disclaimer</h3>
+<p>Tenía otro artículo mucho más interesante y significativo preparado para esta semana, pero la verdad es que era de un tema tan complejo y difícil que nunca pude darle una estructura que me gustara jajaj; así que por lo mientras voy a rifarme este artículo, ya de paso como forma de estudio de un tema que estuve viendo toda la semana en la escuela y me resultaría útil repasarlo de esta manera.</p>
+<p>Como todo el día de hoy estuve viendo este tema todo el día en todas mis materias, e incluso en una conversación que tuve con una amiga acerca de binario <del>tqm Uma</del>, veo prudente comenzar a asentar mis conocimientos de este tema en algún apunte, y ya de paso, aprovechando lo que dije en el anterior párrafo, pues qué mejor que hacerlo en un post de blog si o q.</p>
+<h1 id="introduccion">Introducción</h1>
+<p>Primero que nada me gustaría aclarar que todo este artículo estará escrito en varias instancias <del>no pocas</del> usando notaciones algebráicas y conjuntistas, porque pues soy de Ciencias <del>y soy bárbaro</del>... y porque siento que a veces ver ciertas demostraciones de por qué funcionan correctamente algunas cositas puede resultar bastante útil para entender bien lo que estamos haciendo. Una vez dicho esto, vamos a comenzar</p>
+<h2 id="que-es-un-sistema-numerico">Qué es un sistema numérico?.</h2>
+<p>Piensa que desde los inicios de la capacidad de razonamiento que tenemos como especie <del>no sé si como especie</del> nuestra capacidad de contar cosas y representar las cantidades en papel (o en piedra si eras de Mesopotamia w) era bastante inherente a nuestra naturaleza de ser humanos. Al principio, esta habilidad era utilizada para llevar registro de cosas tan cotidianas como bienes, intercambios comerciales, y en general cosillas más aterrizadas a la realidad del humano primitivo que las utilizaba. Todavía no habían todas las cosas erizas que las matemáticas nos han traído al día de hoy <del>no es queja</del>, pero efectivamente para llegar a todas esas cosas complejas, incluída la computación, primero tenemos que satisfacer esta necesidad de cuantificar la vida.
+Es aquí donde nacen los sistemas numéricos, donde podemos afirmar, sin pena ni gloria, que un sistema numérico no es más que:</p>
+<ul>
+<li>Un conjunto de símbolos, cada uno con un valor asignado</li>
+<li>Una serie de reglas para operarlos, y en base a éstas, construir valores que no tienen un símbolo asignado, pero pueden ser representados como la suma de varios de estos.</li>
+</ul>
+<p>Existen dos tipos de sistemas de numeración: los posicionales y los no posicionales. Siendo los primeros los que seguiremos abordando el resto del articulo y los segundos los más tempranos a nuestra historia, generalmente menos poderosos y algo que abordaré nomás porque ya estamos aquí jaja.</p>
+<h2 id="sistemas-no-posicionales">Sistemas no posicionales</h2>
+<p>Aqui podemos encontrar sistemas simples, en los que tenemos una serie de símbolos que representan ciertas cantidades básicas, y la posición de estos mismos no suele darles una jerarquía, como si veremos que pasará con los sistemas posicionales.
+No quiero profundizar mucho en estos <del>porque no están tan fancys</del> porque pues no suelen ser utilizados para aplicaciones interesantes, entonces solamente te voy a dar el ejemplo más popular que probablemente ya conozcas: el sistema romano.</p>
+<p><img src="/images/blog/250130basesNum/simbolos_romanos.gif" alt="Sistema romano" /></p>
+<p>En este sistema y en el resto de sistemas posicionales, generalmente lo único que te importa es colocar todos los símbolos necesarios y sumar las cantidades individualmente. La posición de los símbolos no importa, en el sentido de que el valor del símbolo no cambia dependiendo de la posición de este. Usemos como ejemplo el sistema romano:</p>
+<ul>
+<li>V = 5</li>
+<li>IV = 4</li>
+<li>VI = 6</li>
+<li>XV = 15</li>
+</ul>
+<p>En todos estos números romanos el símbolo V vale siempre 5, a pesar de que lo estuvimos iterando en varias posiciones distintas respecto al resto de sus compañeros. Contrario a por ejemplo los siguientes ejemplos de números arábigos <del>los normales vaya</del></p>
+<ul>
+<li>1</li>
+<li>12</li>
+<li>123</li>
+</ul>
+<p>Donde si te das cuenta, la posición del 1 SÏ hace que valga distinto. En el primer ejemplo vale 1, en el segundo vale 10 y en el tercero vale 100.</p>
+<p>Puedes observar desde ahora que los sistemas de numeración de este estilo están limitados y son menos poderosos.
+Limitados porque, debido a que no tenemos la ventaja de la posición, necesitamos cada vez más símbolos para representar números cada vez más grandes. Si quisieras representar millones en el sistema de numeración romano o egipcio, necesitarías un símbolo para representar millones, tal vez uno para un millón. Luego, si quisieras representar 5 millones o más, necesitarías otro símbolo para representar 5 millones, y así sucesivamente. Puedes entender que esto resulta en un problema de escalabilidad bastante claro.</p>
+<p>Y menos poderosos porque los algoritmos para realizar operaciones en estos sistemas suelen ser complicados, bastante complicados; por ejemplo, para sumar en romano se siguen los siguientes pasos:</p>
+<ol>
+<li>
+<p>Expresión de los números: Se escriben los números romanos que se van a sumar, uno al lado del otro.</p>
+</li>
+<li>
+<p>Simplificación de símbolos: Se juntan los símbolos iguales y se simplifican siguiendo las reglas del sistema romano:</p>
+</li>
+</ol>
+<p>Cinco "I" se sustituyen por una "V".</p>
+<p>Dos "V" se sustituyen por una "X".</p>
+<p>Cinco "X" se sustituyen por una "L".</p>
+<p>Dos "L" se sustituyen por una "C".</p>
+<p>Cinco "C" se sustituyen por una "D".</p>
+<p>Dos "D" se sustituyen por una "M".</p>
+<ol start="3">
+<li>
+<p>Reordenamiento de símbolos: Se reordenan los símbolos de mayor a menor valor.</p>
+</li>
+<li>
+<p>Resultado: El resultado de la suma es la expresión simplificada y reordenada de los símbolos.</p>
+</li>
+</ol>
+<p>Y de hecho este procedimiento puede resultar propenso a errores si lo sigues al pie de la letra, suma XIV + VII y chance encuentras la bronca.</p>
+<p>No quiero profundizar mucho en estos porque en general cada uno tiene su propio juego de reglas bien distinto, <del>y yo odio las cosas que no son estandarizadas entonces mejor acá la dejamos con estos flacx, no me preguntes más, aunque yo sé que nomás me preguntaste la hora</del>.</p>
+<h2 id="sistemas-posicionales">Sistemas posicionales</h2>
+<p>Estos son los meros buenos, ya que aquí podemos encontrar aquellos en los que tenemos:</p>
+<ul>
+<li>
+<p>Una serie de símbolos que nos expresan cantidades básicas</p>
+</li>
+<li>
+<p>Dependiendo de la posición de un símbolo, este puede tener un valor distinto para colaborar a nuestro número final.</p>
+</li>
+</ul>
+<p>Además, todos estos sistemas se sirven del mismo conjunto de reglas que ahora te puedo explicar con toda la confianza de que te servirá para aprenderlos todos: desde la numeración maya, pasando por la arábiga decimal, hsata el binario <del>potentísimo pa, también me puedo poner formal de una vez, prepara el traje flacx</del>.</p>
+<p>Entonces, consideremos lo siguiente:</p>
+<p>Un sistema posicional se sirve de un conjunto de símbolos, como en los no posicionales. Llamemos a este conjunto $S$</p>
+<p>Para dar un pronto ejemplo, en los números arábigos decimales de toda la vida:
+$$
+S = \{0,1,2,3,4,5,6,7,8,9\}
+$$</p>
+<p>Y ahora, a cada elemento de este conjunto le llamaremos dígito. Y la cantidad de dígitos que tenemos será la <em>base</em> ($b$) de nuestro sistema numérico. Digamos entonces que:
+$$
+\#S = b
+$$</p>
+<p>Y aquí ya tenemos los conceptos principales de un sistema posicional cualquiera. Dependiendo de la posición de un dígito, el valor base de este mismo será multiplicado por una potencia de la base del sistema y ese será el valor final que colaborará al número de la representación. Para ponernos formales, digamos que sea $N$ un número representado en un sistema de numeración de base $b$. Construimos a $N$ de la siguiente forma:
+$$
+N = \sum_{i=-k}^{n-1} d_ib^i
+$$</p>
+<p>O, si lo quieres ver de manera más simple:</p>
+<p><img src="/images/blog/250130basesNum/posiconesDecimales.png" alt="Sistema decimal" /></p>
+<p>Esto es el Teorema Fundamental de la Numeración, el cual en un ratito vamos a demostrar <del>porque soy bárbaro</del>.</p>
+<p>Antes de eso, no puedo remarcar más el decir que bajo este teorema y este sistema nacen todos los sistemas de numeración posicionales, por poner algunos ejemplos:</p>
+<ul>
+<li>Binario</li>
+<li>Octal</li>
+<li>Decimal</li>
+<li>Hexadecimal</li>
+<li>El maya, el cual era base 20</li>
+</ul>
+<p>Entonces, si este teorema y forma son tan importantes entonces considero que estaría fancy demostrarlo. <del>ya wey déjame, soy de Ciencias</del></p>
+<h2 id="demostracion-del-teorema-fundamental-de-la-numeracion">Demostración del Teorema Fundamental de la Numeración</h2>
+<p>Esta demostración se divide en dos partes: primero queremos demostrar que cualquier número que se nos ocurra se puede representar con cualquier base (mayor a 1) y colección de símbolos.</p>
+<p>Sea $N$ un número entero positivo, y sea $b$ la base a utilizar, vamos a proceder por inducción sobre N:</p>
+<ul>
+<li>
+<p><strong>Caso base:</strong> Si $ N = 0 $, se elige $ k = 0 $ y $ a_0 = 0 $, lo cual cumple con la ecuación.</p>
+</li>
+<li>
+<p><strong>Paso inductivo:</strong> Supongamos que todo número $ m $ tal que $ 0 \leq m &lt; N $ puede representarse en base $ b $. Demostremos que $ N $ también puede representarse de esta forma.</p>
+<p>Aplicamos el algoritmo de la división entera entre $ N $ y $ b $:</p>
+<p>$$
+N = q b + r
+$$</p>
+<p>donde $ 0 \leq r &lt; b $ y $ q = \lfloor N / b \rfloor $.<br />
+Como $ q $ es menor que $ N $, por la hipótesis inductiva existe una representación en base $ b $:</p>
+<p>$$
+q = a_k b^k + a_{k-1} b^{k-1} + \dots + a_1 b^1 + a_0 b^0
+$$</p>
+<p>Sustituyendo $ q $ en la ecuación de la división, obtenemos:</p>
+<p>$$
+N = (a_k b^k + a_{k-1} b^{k-1} + \dots + a_1 b^1 + a_0 b^0) b + r
+$$</p>
+<p>que reorganizando da:</p>
+<p>$$
+N = a_k b^{k+1} + a_{k-1} b^k + \dots + a_1 b^2 + a_0 b^1 + r b^0.
+$$</p>
+<p>Así, $ N $ también tiene una representación en base $ b $, completando el paso inductivo.</p>
+</li>
+</ul>
+<p>Después, queremos verificar que dicha representación es de hecho única</p>
+<p>Supongamos que existe otra representación de $ N $ en base $ b $:</p>
+<p>$$
+N = a_k b^k + \dots + a_1 b + a_0 = a'_m b^m + \dots + a'_1 b + a'_0.
+$$</p>
+<p>Sin pérdida de generalidad, supongamos que ambas representaciones tienen la misma longitud $ k $ (rellenamos con ceros si es necesario). Restando ambas ecuaciones:</p>
+<p>$$
+(a_k - a^\prime_k) b^k + (a_{k-1} - a^\prime_{k-1}) b^{k-1} + \dots + (a_0 - a^\prime_0) b^0 = 0
+$$</p>
+<p>Dado que cada $ a_i, a'_i $ satisface $ 0 \leq a_i, a'_i &lt; b $, cada diferencia $ (a_i - a'_i) $ está en el intervalo $ (-b+1, b-1) $, lo que implica que la suma ponderada en potencias de $ b $ solo puede ser cero si todos los coeficientes son cero, es decir:</p>
+<p>$$
+a_i = a'_i \quad \text{para todo } i.
+$$</p>
+<p>Esto demuestra la unicidad de la representación.</p>
+<p>Y con esto hemos terminado <del>en bombiza pa</del>, concluyendo que con este teorema y sistemas podemos representar TODOS los números que se nos ocurran de una manera UNICA.</p>
+<h1 id="va-y-todo-esto-para-que-me-sirve-en-ciencias-de-la-computacion">Va, y todo esto para qué me sirve en Ciencias de la Computación?</h1>
+<p>Bueno, ahí te va...
+Particularmente los sistemas de numeración binarios, octales y hexadecimal van a ser el pan de cada día si te pones a trabajar en programación de bajo nivel <del>en los alambritos decía una profesora</del>; porque al final del día todos los circuitos digitales solamente pueden distinguir entre dos estados: encendido y apagado, 0 y 1 pa los cuates, verdadero y falso pa los lógicos.</p>
+<p>Entonces, cualquier número que representes en la computadora, y cualquier instrucción que le vayas a dar, y cualquier dirección de memoria a la que quieras acceder, será escrita en binario.</p>
+<p>Y aquí nace naturalmente la pregunta de... ok, los sistemas de numeración sirven para representar números enteros positivos, pero cómo le hacemos para representar números negativos y decimales? Bueno, ahí te va.</p>
+<h2 id="numeros-negativos-en-binario">Números negativos en binario</h2>
+<p>Hay que aclarar un problema importante de las computadoras que nos obliga a tomar con pinzas este problema: las computadoras (en esencia) sólo saben sumar. Podríamos como arquitectos de computadoras rifarnos un nuevo chip súper fancy y trucutrú para hacer restas entre dos números positivos, simplemente aclarándole a este nuevo circuito cuál es el restando y cuál es el restado <del>no sé si se llamen así pero ajá</del> pero pues es rudeza innecesaria; si ya sabemos sumar, sólo necesitamos crear una forma de representar números negativos que se porte bonito <del>si tu me lo pides yo me porto bonito</del> con el algoritmo de suma que ya tenemos en las computadoras.</p>
+<p>Para esto, vamos a representar los números negativos en su forma complemento a dos:</p>
+<ul>
+<li>Reservaremos el bit más relevante para el signo, si es 0 es positivo, si es 1 es negativo</li>
+<li>Convertiremos el número a su forma en complemento a 1 (para los cuates, cambia todos los 1s por 0s y viceversa)</li>
+<li>Le sumamos 1</li>
+</ul>
+<p>Entonces, por ejemplo, si quisieramos representar el -5 en 4 bits:
+5 → 0101
+−5 → Complemento a 1: 1010, luego sumamos 1: 1011.</p>
+<p>Ahora, fíjate que pasa si sumamos un número positivo con uno negativo con esta solución:</p>
+<pre><code>3−5=3+(−5)
+
+0011 (3)
+
+1011 (-5)
+
+Suma:
+
+0011
+
++ 1011
+
+--------
+
+1110  (que es -2 en complemento a 2)
+</code></pre>
+<p>Está mágico el asunto no? Con esta solución podemos chambear con los números negativos de manera super fácil y operarlos con los algoritmos del decimal que ya existen.</p>
+<p>Esta es la solución que se usa en las computadoras actuales.</p>
+<h2 id="numeros-de-punto-flotante">Números de punto flotante</h2>
+<p>Primero que nada aclarar que de hecho sí puedes representar números fraccionarios en binario, y de hecho de una forma bastante parecida y natural a como esperarías hacerlo con el sistema decimal de toda la vida: colocas un punto, y después de ese punto, todos los números son multiplicados ahora por potencias negativas de tu base. Es decir, de la misma forma en la que 10.5 es lo mismo que $1 * 10 + 0 * 1 + 5 * 10^-1$, podríamos tener un número en binario tal que sea: 10101.11001.</p>
+<p>Pero esta forma de chambear no es apropiada, pues en tu memoria no puedes asignar otro valor que no sea 0 o 1 para decirle "e we, aquí está el punto, todo lo que sigue son fracciones"... Bueno, podrías hacerlo, podrías tener números de 32 bits y decirle a la compu que los primeros 16 bits son para representar números enteros y los siguientes 16 para representar la parte fraccionaria del número; pero la bronca nacería en que:</p>
+<p>Imaginate que tienes este sistema, y le das tu compu a un arquitecto que quiere construir un puente y va a chambear con números grandotes con casi nada de parte fraccionaria. Estás tirando 16 bits a la basura.</p>
+<p>O imagínate que ahora le das tu compu a un ingeniero civil, y necesita operar con números fraccionarios muy pequeños, en la práctica sólo va a tener 16 bits para chambear en esos números pequeñitos... <del>te van a funar</del></p>
+<p>Estaría interesante poder recorrer el punto decimal según tus necesidades no? Bueno, es aquí donde nacen las representaciones en punto flotante.</p>
+<p>Vamos a chambear con un número de punto flotante de 32bits, aunque también existen convenciones para números de punto flotante de 64 bits (de doble precisión) pero ps el fundamento es el mismo.</p>
+<p>El primer bit es para el signo, los siguientes 8 para el exponente (dame chance, ahorita vemos qpd) y los que quedan para la mantisa (dame chance, ahorita vemos qpd x2)</p>
+<p>Te acuerdas de la notación científica que viste en la prepa? Esa que te decía que si querías representar un número muy grande... digamos 10000000, podías hacerlo como $1x10^7$, o un número muy pequeño, digamos 0.000023 como $2.3*10^-5$. Bueno, pues el punto flotante se basa en este principio. Tu mantisa es la parte con información de tu número científico, y tu exponente es.... tu exponente....</p>
+<p>Pero aquí hay varias peculiaridades a destacar antes de seguir.</p>
+<ul>
+<li>La parte destinada al exponente tiene un sesgo de 127, es decir, para evitarnos el problemón de números negativos que vimos hace rato, recorremos todos los números 127 lugares. De esta manera, si tenemos 00000000 en nuestra parte exponente, en realidad esto es -127, no 0</li>
+<li>La mantisa no se guarda en componente a dos si es negativa, pa eso tienes el bit del signo.</li>
+</ul>
+<p>Para que amarre el concepto, te va un ejemplo.
+Tomemos el número decimal <strong>5.75</strong> y veamos cómo se representa en <strong>punto flotante de 32 bits</strong>.</p>
+<h4 id="paso-1-convertir-a-binario">Paso 1: Convertir a binario</h4>
+<p>$ 5.75 $ en binario es:
+$$
+5.75 = 101.11_2
+$$
+(101 es 5 en binario, y <code>.11</code> es 0.75 en binario).</p>
+<h4 id="paso-2-escribirlo-en-notacion-cientifica-binaria">Paso 2: Escribirlo en notación científica binaria</h4>
+<p>Queremos que el número esté en la forma:</p>
+<p>$$
+1.xxxx \times 2^n
+$$</p>
+<p>Movemos el punto decimal hasta después del primer <code>1</code>:</p>
+<p>$$
+1.0111 \times 2^2
+$$</p>
+<p>Aquí:</p>
+<ul>
+<li><strong>Mantisa</strong> = <code>0111</code> (los bits después del <code>1.</code>).</li>
+<li><strong>Exponente real</strong> = <code>2</code>.</li>
+</ul>
+<h4 id="paso-3-obtener-el-exponente-almacenado">Paso 3: Obtener el exponente almacenado</h4>
+<p>El exponente en IEEE 754 se almacena con <strong>bias 127</strong>:</p>
+<p>$$
+E_{\text{almacenado}} = E_{\text{real}} + 127 = 2 + 127 = 129
+$$</p>
+<p>129 en binario es <code>10000001</code>.</p>
+<h4 id="paso-4-ensamblar-los-bits">Paso 4: Ensamblar los bits</h4>
+<ul>
+<li><strong>Signo</strong> = <code>0</code> (porque es positivo).</li>
+<li><strong>Exponente</strong> = <code>10000001</code>.</li>
+<li><strong>Mantisa</strong> = <code>01110000000000000000000</code> (rellenamos con ceros hasta 23 bits).</li>
+</ul>
+<p>💾 <strong>Resultado final en binario (32 bits)</strong>:</p>
+<pre><code>0 10000001 01110000000000000000000
+</code></pre>
+<p>Ahora, hay que decir que este proceso no es perfecto, existen varios casos en los que podemos perder precisión cuando los operamos, y de hecho, hay casos en los que ni siquiera necesitamos operarlos para perder precisión, ya sólo por existir pueden ser imprecisos. Pero es lo que hay, y es la solución que se implementa en los sistemas modernos.</p>
+<h1 id="life-hacks-y-conclusion">Life hacks y conclusión</h1>
+<p>Y con esto ya somos unos expertasos en binario y podemos hablar con la computadora de tú por tú, porque ya entendemos lo básico de sistemas de numeración <del>y ya leímos quiubole con el binario de Adal Ramones</del> y podemos operar en binario sin asustarnos...</p>
+<p>Pero ahí te va un último tip y con este me despido pq ya me dió sueño, este artículo quedó más largo de lo que esperaba.</p>
+<h2 id="mejor-hexadecimal-u-octal">Mejor hexadecimal u octal</h2>
+<p>Si vas a trabajar con números binarios, no trabajes con números binarios :D</p>
+<p>Las computadoras no tienen opción pero para nosotros es bastante feo estar leyendo secuencias grandotas de 0100011111011111... y más considerando que el estándar actual en computadoras es que los números binarios sean de 64 bits o 32 bits, está horrible leer algo así.</p>
+<p>Pero para eso vienen los números hexadecimales a salvarnos, pues resulta que puedes representar números binarios en hexadecimal de manera súper fácil, y traducirlos de vuelta de manera súper fácil también. Sólo tienes que partir tu número binario en trozos de 4 dígitos, comenzando por el bit menos relevante, y convertirlos en sus representantes en hexadecimal.</p>
+<p><img src="/images/blog/250130basesNum/binarytoHex.png" alt="Binario a hex" /></p>
+<p>De esta manera, un número binario de 32 bits pasa a ser un número hexadecimal de 8 dígitos, una buena mejora no?</p>
+<p>Este metodo se usa sobre todo por muchas herramientas para referirse a direcciones de memoria, porque generalmente estas son direcciones de 64 bits, y si yo te digo que tu programa está accediendo a la dirección 0xFFF32BB8 <del>me vas a mentar la madre de todas formas</del> es más práctico a que te diga que está en la dirección
+11111111111100110010101110111000.</p>
+<p>Y con el octal es lo mismo, pero con trozos de 3 en lugar de trozos de 4.</p>
+<p>Listo, ahora si ya me voy a dormir jjj.</p>
+</section>
+
+  <hr />
+
+  <!-- Post Taxonomies -->
+  
+<!---->
+
+  <!-- Post Nav -->
+  
+<!---->
+
+  <!-- Comment -->
+  
+
+  <!-- Page End inject -->
+  
+</article>
+
+    </main>
+
+    <footer class="mx-auto flex max-w-3xl flex-wrap items-center px-8 py-4 text-sm opacity-60">
+  <div class="mr-auto basis-full lg:basis-1/2">
+    <!---->
+    <!---->
+    &copy; 2025<!---->
+    
+    <a class="link" href="https://IsaacNietoG.github.io">
+      IsaacNietoG
+    </a>
+    
+  </div>
+  <div class="flex basis-full lg:basis-1/2 lg:justify-end">
+    <a class="link mr-6 lg:ml-6" href="https://www.getzola.org/" rel="noopener" target="_blank">
+      Powered by Zola
+    </a>
+    <a class="link" href="https://github.com/st1020/kita" rel="noopener" target="_blank">✎ Kita</a>
+  </div>
+  <!-- Footer inject -->
+  
+</footer>
+
+
+    <!-- Body End inject -->
+    
+  </body>
+</html>

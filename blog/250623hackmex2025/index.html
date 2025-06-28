@@ -1,0 +1,410 @@
+<!doctype html>
+<html class="not-ready lg:text-base" lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Title -->
+  <title>
+    Road to HackMex: Dia 3 - Confuser - Tchai&#x27;s Halls of Reflection
+  </title>
+
+  <!-- Meta -->
+  <meta name="theme-color" />
+
+  
+  <!-- Author -->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  <meta name="description" content="Tercera máquina del entrenamiento para Hackmex" />
+  <meta name="author" content="IsaacNietoG" />
+  <!-- The Open Graph protocol -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Road to HackMex: Dia 3 - Confuser" />
+  <meta property="og:site_name" content="Tchai&#x27;s Halls of Reflection" />
+  <meta property="og:description" content="Tercera máquina del entrenamiento para Hackmex" />
+  <meta property="og:url" content="https:&#x2F;&#x2F;IsaacNietoG.github.io&#x2F;blog&#x2F;250623hackmex2025&#x2F;" />
+  
+  <!---->
+  
+  <!---->
+  
+
+  <!-- CSS & JS -->
+  <link rel="preload stylesheet" as="style" href="https://IsaacNietoG.github.io/main.css" />
+  <style>
+    :root {
+      --bg: #f4f4f5;
+      --bg-dark: #18181b;
+      --header: #e4e4e7;
+      --header-dark: #27272a;
+    }
+  </style>
+
+  
+
+  <!-- Dark Icon -->
+  <link rel="preload" as="image" href="https://IsaacNietoG.github.io/icons/theme.svg" />
+
+  <!-- Math -->
+  
+  <!---->
+
+  <!-- Mermaid -->
+  
+  <!---->
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://IsaacNietoG.github.io/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://IsaacNietoG.github.io/apple-touch-icon.png" />
+
+  <!-- Feeds -->
+  
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https:&#x2F;&#x2F;IsaacNietoG.github.io&#x2F;blog&#x2F;250623hackmex2025&#x2F;" />
+
+  <!-- Head inject -->
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header
+  class="header fixed top-0 z-40 mx-auto min-h-[3.5rem] w-full"
+>
+  <div class="mx-auto w-full max-w-4xl p-3 lg:flex lg:justify-between">
+    <div class="flex justify-between">
+      <div class="flex items-center">
+        <a class="text-2xl font-semibold" href="https://IsaacNietoG.github.io">Tchai&#x27;s Halls of Reflection</a>
+        <div
+          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] [background:url(./icons/theme.svg)_left_center/cover_no-repeat] dark:invert dark:[background-position:right]"
+          role="button"
+          aria-label="Dark"
+        ></div>
+      </div>
+      
+      <div
+        class="btn-menu relative z-50 flex h-8 w-8 shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+        role="button"
+        aria-label="Menu"
+      ></div>
+      
+    </div>
+    <script>
+      // base
+      const htmlClass = document.documentElement.classList;
+      setTimeout(() => {
+        htmlClass.remove("not-ready");
+      }, 10);
+
+      // mobile menu
+      const btnMenu = document.querySelector(".btn-menu");
+      btnMenu?.addEventListener("click", () => {
+        htmlClass.toggle("open");
+      });
+
+      // dark theme
+      const setDark = (isDark) => {
+        if (isDark) {
+          document.body.dispatchEvent(new CustomEvent("set-theme", { detail: "dark" }));
+          htmlClass.add("dark");
+        } else {
+          document.body.dispatchEvent(new CustomEvent("set-theme", { detail: "light" }));
+          htmlClass.remove("dark");
+        }
+        localStorage.setItem("dark", isDark);
+      };
+
+      // init
+      const darkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+      if (htmlClass.contains("dark")) {
+        setDark(true);
+      } else {
+        const darkVal = localStorage.getItem("dark");
+        setDark(darkVal ? darkVal === "true" : darkScheme.matches);
+      }
+
+      // listen system
+      darkScheme.addEventListener("change", (event) => {
+        setDark(event.matches);
+      });
+
+      // manual switch
+      const btnDark = document.querySelector(".btn-dark");
+      btnDark.addEventListener("click", () => {
+        setDark(localStorage.getItem("dark") !== "true");
+      });
+    </script>
+    
+    <nav class="flex w-full items-center lg:w-auto">
+      <ul
+        class="nav-wrapper flex w-full flex-col py-2 lg:w-auto lg:flex-row lg:self-center lg:py-0"
+      >
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://IsaacNietoG.github.io/portfolio"
+            >Portfolio</a
+          >
+        </li>
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://IsaacNietoG.github.io/blog"
+            >Blog</a
+          >
+        </li>
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://IsaacNietoG.github.io/about"
+            >About</a
+          >
+        </li>
+        
+      </ul>
+      <!-- Header Nav inject -->
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <!-- Body Start inject -->
+    
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl break-words px-4 pb-16 pt-32 dark:prose-invert prose-pre:rounded-lg prose-img:rounded-lg"
+    >
+      
+<article>
+  <!-- Page Start inject -->
+  
+
+  <header class="mb-16">
+    <h1 class="!my-0 pb-2.5">Road to HackMex: Dia 3 - Confuser</h1>
+    <div class="text-sm antialiased opacity-60">
+  
+  <time>2025-06-23</time>
+  <span class="mx-1">&middot;</span>
+  <span>7min</span>
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  
+  <span class="mx-1">&middot;</span>
+  <span>IsaacNietoG</span>
+  
+  <!-- Page Info inject -->
+  
+</div>
+
+  </header>
+
+  
+
+  <!-- TOC -->
+  <!---->
+<div class="block-bg mb-12 flex rounded-lg p-2 text-lg">
+  <details>
+    <summary class="cursor-pointer py-1 pl-4">
+      <span>Table of Contents</span>
+    </summary>
+    <div class="px-2">
+      <ul>
+        
+        <li>
+          <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250623hackmex2025/#writeup-confuser-echoctf"
+            >Writeup: confuser - EchoCTF</a
+          >
+          
+          <ul>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250623hackmex2025/#informacion-general"
+                >Información General</a
+              >
+            </li>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250623hackmex2025/#descripcion-de-la-maquina"
+                >Descripción de la máquina</a
+              >
+            </li>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250623hackmex2025/#enumeracion"
+                >Enumeración</a
+              >
+            </li>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250623hackmex2025/#explotacion"
+                >Explotación</a
+              >
+            </li>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250623hackmex2025/#escalacion-de-privilegios"
+                >Escalación de Privilegios</a
+              >
+            </li>
+            
+          </ul>
+          
+        </li>
+        
+      </ul>
+    </div>
+  </details>
+</div>
+
+<!---->
+
+  <!-- Content -->
+  <section><h1 id="writeup-confuser-echoctf">Writeup: confuser - EchoCTF</h1>
+<h2 id="informacion-general">Información General</h2>
+<p><img src="/images/blog/Screenshot_20250620_175652.png" alt="" /></p>
+<h2 id="descripcion-de-la-maquina">Descripción de la máquina</h2>
+<p>Do not believe anything this system has to say, it tries to confuse you.</p>
+<h2 id="enumeracion">Enumeración</h2>
+<h3 id="escaneo-inicial">Escaneo Inicial</h3>
+<p>Corremos nmap y lo único que nos tiene es que hay un servicio http en el puerto 80 y un ssh en el puerto 20 respectivamente.</p>
+<p>Nos conectamos al servicio http con nuestro navegador para ver qué hay y encontramos una página con un gestor de archivos simple. Al cual podemos subir y descargar cosas, pero por el momento está vacío.</p>
+<p>Las versiones de SSH y HTTP no son vulnerables, entonces veremos qué pasa con este servicio de explorador de archivos, ya que por aquí debe de estar la vulnerabilidad</p>
+<h3 id="analisis-de-servicios">Análisis de Servicios</h3>
+<p>El servicio de subida de archivos es un Responsive File Manager en su versión 9.9.5 por lo que podemos encontrar en la página de información del servicio mismo que nos da.</p>
+<p><img src="/images/blog/Screenshot_20250620_101455.png" alt="" /></p>
+<p>Antes de intentar nada, podríamos comenzar a buscar vulnerabilidades una vez teniendo el nombre del servicio, para ver si hay algún CVE ya conocido que nos pueda ayudar.</p>
+<h2 id="explotacion">Explotación</h2>
+<h3 id="busqueda-de-vulnerabilidades">Busqueda de vulnerabilidades</h3>
+<p>Y efectivamente, si buscamos el servicio nos sale un exploit para remote command execution. El cual no nos pide requisitos adicionales, por lo que podríamos intentar correrlo de una vez para ver q pasa.</p>
+<p><img src="/images/blog/Screenshot_20250620_101959.png" alt="" /></p>
+<h3 id="intentos-de-explotaciones">Intentos de explotaciones</h3>
+<p>Si intentamos correr el exploit recién salido de la caja no funcionará, y nos tirará errores relacionados con sitios y archivos no encontrados, entonces hay que bajar al código a ver qué es lo que pasa.</p>
+<p>Bajando al código y comparando los endpoints que busca con los endpoints que tenemos en la máquina nos podemos dar cuenta del error:</p>
+<p>El exploit espera que el servicio viva bajo /filemanager, mientras que la realidad en la máquina es que el servicio vive bajo /plugins/filemanager, por lo que debemos de corregir todas las rutas para que el exploit obedezca a la estructura real de la máquina.</p>
+<p><img src="/images/blog/Screenshot_20250620_102304.png" alt="" /></p>
+<h3 id="explotacion-1">Explotación</h3>
+<p>Una vez hecha la corrección, podemos correr el script y nos dará la shell directamente, haciendo de este uno de nuestros footholds más fáciles hasta el momento</p>
+<p><img src="/images/blog/Screenshot_20250620_102550.png" alt="" /></p>
+<p>Y de hecho en este screenshot podemos ver arriba del intento exitoso el error que tira el exploit cuando intentamos correrlo sin realizar las correcciones correspondientes, para q me crean jaja</p>
+<p><img src="/images/blog/Screenshot_20250620_102457.png" alt="" /></p>
+<p>El exploit nos va a dar una shell interactiva desde la cual de buenas a primeras podemos ya sacar la bandera de /etc/passwd y la bandera de env; pero lo fuerte es que también es capaz de darnos nuestra shell con netcat.</p>
+<p>Ponemos nuestro netcat en escucha y corremos el comando y ya estufas, oficialmente we're in</p>
+<h2 id="escalacion-de-privilegios">Escalación de Privilegios</h2>
+<h3 id="analisis">Análisis</h3>
+<p>Una vez dentro, podemos hacer varias cosillas, pero algo que he aprendido estos días es que es un buen hábito rifarnos un sudo -l al inicio para ver si de pura casualidad tenemos algun binario que podamos ejecutar como sudos desde un inicio.</p>
+<p><img src="/images/blog/Screenshot_20250620_102714.png" alt="" /></p>
+<p>Y efectivamente, podemos ejecutar confuser como sudo y sin contraseña, entonces invertiremos nuestros esfuerzos en esto.</p>
+<p>Antes de continuar, también prestemos atención a que sudo nos dice que nuestros permisos tienen habilitado el parámetro env_reset, lo que nos indica que <strong>cualquier comando que ejecutemos como sudo, se va a ejecutar con un entorno limpio, dropeando todos nuestros cambios en variables de entorno</strong>. Esto será importante para más adelante, así que guarda este dato en lo más preciado d tu memoria.</p>
+<p>Además, si analizamos los permisos de este binario, nos daremos cuenta de que <strong>además de que lo podemos correr como sudo, también tiene SUID</strong>, esto será muy importante próximamente, pero primero veamos qué es lo que hace.</p>
+<p><img src="/images/blog/Screenshot_20250620_103732.png" alt="" /></p>
+<p>Inicialmente lo intenté correr para ver q pasaba y "rompió" mi shell lol, así que saqué las armas pesadas y lo decompilé con Ghidra. Esto fué como matar una mosca a escopetazos pq no me reveló otra cosa más que mi estupidez.</p>
+<pre><code>int32_t main(int32_t argc, char** argv, char** envp)
+{
+    setegid(0, seteuid(0, argv));
+    setuid(0);
+    setgid(0);
+    int32_t rax_4 = system(&quot;&#x2F;bin&#x2F;ls -alR &amp;&amp; getpcaps&quot;);
+    
+    if (rax_4)
+        printf(&quot;Command execution failed or retu…&quot;, rax_4);
+    else
+        printf(&quot;Command executed successfully.&quot;);
+
+return 0;
+}
+</code></pre>
+<p>En realidad no rompe la shell JAJAJA, lo único que hace "a grosso modo" es ejecutar el siguiente comando con privilegios de administrador
+<code>/bin/ls -alR &amp;&amp; getpcaps</code></p>
+<p>Y la razón por la que pensaba que rompía mi shell es porque siempre se me olvida darle un tamaño de rows y columns, lo cual provocaba su eventual muerte después de unas cuantas líneas.</p>
+<p>Esto entonces ya nos abre la puerta a dos cosas:</p>
+<p>Si vamos apurados, con este comando podemos reclamar de una vez la bandera de /root/ETSTCF_<em>CENSURADO</em> simplemente corriendo confuser desde la raíz y filtrando su salida para que solo nos muestre los contenidos de /root. Podemos hacer esto porque está corriendo ls de manera recursiva.</p>
+<p>Como este binario es tanto "sudoeable" como con SUID, entonces, si lográramos hacer algo con su ejecución podríamos escalar privilegios desde aquí.</p>
+<h3 id="explotacion-2">Explotación</h3>
+<p>Lo primero que se me vino a la mente fue secuestrar alguno de los dos comandos ejecutados por este binario, pero desafortunadamente no tenemos los permisos para modificar ninguno de los dos.</p>
+<p>Luego, me puse a pensar en que no era necesario secuestrar los comandos originales, si podemos simplemente cambiar el PATH para que no los priorice, y en su lugar llegue a sustitutos que nosotros habremos colocado de manera mañosa.</p>
+<p>Probaremos con getpcaps porque es con el que menos perdemos si logramos sustituirlo (en la máquina anterior sustituimos ls y no estuvo tan rico jajaj)</p>
+<p>Entonces crearemos un script ejecutable en /tmp/getpcaps el cual contendrá lo siguiente:</p>
+<pre><code>#!&#x2F;bin&#x2F;bash
+chmod u+s &#x2F;bin&#x2F;bash
+</code></pre>
+<p>Y lo que hará será darle SUID a /bin/bash, para poder levantar nuestra shell de admins así nomás, sin tanto mole pa no opacar el arroz.</p>
+<p>Luego de eso, agregaremos /tmp a nuestro PATH con</p>
+<pre><code>export PATH=&#x2F;tmp:$PATH
+</code></pre>
+<p>Y le damos prioridad principal, de esa forma al llamar getpcaps desde dentro del comando, idealmente nuestro script secuestrará el comando.</p>
+<p>Ahora, aquí hay algo importante, y es que recordemos que confuser tiene dos formas de ser corrido como root:</p>
+<ul>
+<li>Con nuestra capability que vimos en sudo -l</li>
+<li>Con el bit SUID que tiene</li>
+</ul>
+<p>Si intentamos correr confuser con la capability, nos encontraremos con el problema de que el comando correrá con un env limpio, entonces nuestro cambio al PATH no será efectivo.</p>
+<p>Por el contrario, si corremos confuser con el SUID (sin meterle sudo al inicio) entonces el cambio que hicimos a PATH se conservará y nuestro script habrá secuestrado el comando getpcaps exitosamente.</p>
+<p><img src="/images/blog/Screenshot_20250620_161108.png" alt="" /></p>
+<p>Con esto ya estaremos halfway through, pues lo único que nos hace falta es correr /bin/bash. Pero aquí hay algo importante, y es que deberemos correr /bin/bash con el parámetro -p para que no dropee la UID que le acabamos de dar. Una vez hecho esto, oficialmente somos roots</p>
+<p><img src="/images/blog/Screenshot_20250620_161633.png" alt="" /></p>
+<p>De aquí, si has seguido mis indicaciones de flags, solo te hará falta la de /etc/shadow.</p>
+<p><strong>headshot</strong></p>
+</section>
+
+  <hr />
+
+  <!-- Post Taxonomies -->
+  
+<!---->
+
+  <!-- Post Nav -->
+  
+<!---->
+
+  <!-- Comment -->
+  
+
+  <!-- Page End inject -->
+  
+</article>
+
+    </main>
+
+    <footer class="mx-auto flex max-w-3xl flex-wrap items-center px-8 py-4 text-sm opacity-60">
+  <div class="mr-auto basis-full lg:basis-1/2">
+    <!---->
+    <!---->
+    &copy; 2025<!---->
+    
+    <a class="link" href="https://IsaacNietoG.github.io">
+      IsaacNietoG
+    </a>
+    
+  </div>
+  <div class="flex basis-full lg:basis-1/2 lg:justify-end">
+    <a class="link mr-6 lg:ml-6" href="https://www.getzola.org/" rel="noopener" target="_blank">
+      Powered by Zola
+    </a>
+    <a class="link" href="https://github.com/st1020/kita" rel="noopener" target="_blank">✎ Kita</a>
+  </div>
+  <!-- Footer inject -->
+  
+</footer>
+
+
+    <!-- Body End inject -->
+    
+  </body>
+</html>

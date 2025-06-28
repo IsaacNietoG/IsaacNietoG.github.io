@@ -1,0 +1,500 @@
+<!doctype html>
+<html class="not-ready lg:text-base" lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Title -->
+  <title>
+    Apuntes para la clase de Active Directory Pumahat - Tchai&#x27;s Halls of Reflection
+  </title>
+
+  <!-- Meta -->
+  <meta name="theme-color" />
+
+  
+  <!-- Author -->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  <meta name="description" content="Resultados de mi sesión de estudio sobre Active Directory para dar clases en Pumahat. Este artículo irá cambiando con el paso del tiempo probablemente" />
+  <meta name="author" content="IsaacNietoG" />
+  <!-- The Open Graph protocol -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Apuntes para la clase de Active Directory Pumahat" />
+  <meta property="og:site_name" content="Tchai&#x27;s Halls of Reflection" />
+  <meta property="og:description" content="Resultados de mi sesión de estudio sobre Active Directory para dar clases en Pumahat. Este artículo irá cambiando con el paso del tiempo probablemente" />
+  <meta property="og:url" content="https:&#x2F;&#x2F;IsaacNietoG.github.io&#x2F;blog&#x2F;250410apuntesAD&#x2F;" />
+  
+  <!---->
+  
+  <!---->
+  
+
+  <!-- CSS & JS -->
+  <link rel="preload stylesheet" as="style" href="https://IsaacNietoG.github.io/main.css" />
+  <style>
+    :root {
+      --bg: #f4f4f5;
+      --bg-dark: #18181b;
+      --header: #e4e4e7;
+      --header-dark: #27272a;
+    }
+  </style>
+
+  
+
+  <!-- Dark Icon -->
+  <link rel="preload" as="image" href="https://IsaacNietoG.github.io/icons/theme.svg" />
+
+  <!-- Math -->
+  
+  <!---->
+
+  <!-- Mermaid -->
+  
+  <!---->
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://IsaacNietoG.github.io/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://IsaacNietoG.github.io/apple-touch-icon.png" />
+
+  <!-- Feeds -->
+  
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https:&#x2F;&#x2F;IsaacNietoG.github.io&#x2F;blog&#x2F;250410apuntesAD&#x2F;" />
+
+  <!-- Head inject -->
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header
+  class="header fixed top-0 z-40 mx-auto min-h-[3.5rem] w-full"
+>
+  <div class="mx-auto w-full max-w-4xl p-3 lg:flex lg:justify-between">
+    <div class="flex justify-between">
+      <div class="flex items-center">
+        <a class="text-2xl font-semibold" href="https://IsaacNietoG.github.io">Tchai&#x27;s Halls of Reflection</a>
+        <div
+          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] [background:url(./icons/theme.svg)_left_center/cover_no-repeat] dark:invert dark:[background-position:right]"
+          role="button"
+          aria-label="Dark"
+        ></div>
+      </div>
+      
+      <div
+        class="btn-menu relative z-50 flex h-8 w-8 shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+        role="button"
+        aria-label="Menu"
+      ></div>
+      
+    </div>
+    <script>
+      // base
+      const htmlClass = document.documentElement.classList;
+      setTimeout(() => {
+        htmlClass.remove("not-ready");
+      }, 10);
+
+      // mobile menu
+      const btnMenu = document.querySelector(".btn-menu");
+      btnMenu?.addEventListener("click", () => {
+        htmlClass.toggle("open");
+      });
+
+      // dark theme
+      const setDark = (isDark) => {
+        if (isDark) {
+          document.body.dispatchEvent(new CustomEvent("set-theme", { detail: "dark" }));
+          htmlClass.add("dark");
+        } else {
+          document.body.dispatchEvent(new CustomEvent("set-theme", { detail: "light" }));
+          htmlClass.remove("dark");
+        }
+        localStorage.setItem("dark", isDark);
+      };
+
+      // init
+      const darkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+      if (htmlClass.contains("dark")) {
+        setDark(true);
+      } else {
+        const darkVal = localStorage.getItem("dark");
+        setDark(darkVal ? darkVal === "true" : darkScheme.matches);
+      }
+
+      // listen system
+      darkScheme.addEventListener("change", (event) => {
+        setDark(event.matches);
+      });
+
+      // manual switch
+      const btnDark = document.querySelector(".btn-dark");
+      btnDark.addEventListener("click", () => {
+        setDark(localStorage.getItem("dark") !== "true");
+      });
+    </script>
+    
+    <nav class="flex w-full items-center lg:w-auto">
+      <ul
+        class="nav-wrapper flex w-full flex-col py-2 lg:w-auto lg:flex-row lg:self-center lg:py-0"
+      >
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://IsaacNietoG.github.io/portfolio"
+            >Portfolio</a
+          >
+        </li>
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://IsaacNietoG.github.io/blog"
+            >Blog</a
+          >
+        </li>
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://IsaacNietoG.github.io/about"
+            >About</a
+          >
+        </li>
+        
+      </ul>
+      <!-- Header Nav inject -->
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <!-- Body Start inject -->
+    
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl break-words px-4 pb-16 pt-32 dark:prose-invert prose-pre:rounded-lg prose-img:rounded-lg"
+    >
+      
+<article>
+  <!-- Page Start inject -->
+  
+
+  <header class="mb-16">
+    <h1 class="!my-0 pb-2.5">Apuntes para la clase de Active Directory Pumahat</h1>
+    <div class="text-sm antialiased opacity-60">
+  
+  <time>2025-04-10</time>
+  <span class="mx-1">&middot;</span>
+  <span>13min</span>
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  
+  <span class="mx-1">&middot;</span>
+  <span>IsaacNietoG</span>
+  
+  <!-- Page Info inject -->
+  
+</div>
+
+  </header>
+
+  
+
+  <!-- TOC -->
+  <!---->
+<div class="block-bg mb-12 flex rounded-lg p-2 text-lg">
+  <details>
+    <summary class="cursor-pointer py-1 pl-4">
+      <span>Table of Contents</span>
+    </summary>
+    <div class="px-2">
+      <ul>
+        
+        <li>
+          <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250410apuntesAD/#apuntes-para-clases-de-active-directory"
+            >Apuntes para clases de Active Directory</a
+          >
+          
+          <ul>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250410apuntesAD/#que-es-active-directory"
+                >Que es Active Directory?</a
+              >
+            </li>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250410apuntesAD/#estructura"
+                >Estructura</a
+              >
+            </li>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250410apuntesAD/#atributos-globales-para-los-objetos"
+                >Atributos globales para los objetos</a
+              >
+            </li>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250410apuntesAD/#domain-controller"
+                >Domain Controller</a
+              >
+            </li>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250410apuntesAD/#access-control-entries"
+                >Access Control Entries</a
+              >
+            </li>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250410apuntesAD/#donde-se-guardan-estos-datos"
+                >Donde se guardan estos datos?</a
+              >
+            </li>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250410apuntesAD/#protocolos"
+                >Protocolos</a
+              >
+            </li>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250410apuntesAD/#ataques-comunes-a-considerar"
+                >Ataques comunes a considerar</a
+              >
+            </li>
+            
+          </ul>
+          
+        </li>
+        
+      </ul>
+    </div>
+  </details>
+</div>
+
+<!---->
+
+  <!-- Content -->
+  <section><h1 id="apuntes-para-clases-de-active-directory">Apuntes para clases de Active Directory</h1>
+<h2 id="que-es-active-directory">Que es Active Directory?</h2>
+<p>Active Directory es la implementación de Microsoft de un servicio de directorio, es decir, es el approach de Microsoft a ofrecer un servicio que nos permita almacenar y organizar la información de una red de ordenadores y los recursos a los que tiene acceso; le permite a los administradores gestionar el acceso de los usuarios a los recursos de la red según las necesidades correspondientes.</p>
+<p>Un servicio de directorio es una capa de abstracción entre los usuarios y los recursos compartidos.</p>
+<h3 id="capa-de-abstraccion-entre-usuarios-y-recursos-compartidos">Capa de abstracción entre usuarios y recursos compartidos</h3>
+<p>Este es el término clave. Imagina que tienes una empresa en donde tienes a todos tus empleados (USUARIOS), los cuales para realizar su trabajo deben de tener acceso a ciertos servidores, impresoras, carpetas compartidas, computadoras(que sus cuentas sirvan para entrar a varias computadoras, sea remotamente o in situ), repositorios, etc (RECURSOS COMPARTIDOS).</p>
+<p>Este es un problema, porque evidentemente necesitas establecer políticas para acceder a estos recursos, desde el qué hasta el cómo, para mayor seguridad. Y si lo haces a manita pues está difícil.</p>
+<p>Entonces es aquí donde entran los servicios de directorio como Active Directory, que son herramientas administrativas que justamente te permiten definir la especificación de cómo tus usuarios van a acceder a los recursos compartidos, y a  cuáles tiene acceso cada grupo de usuarios.</p>
+<h3 id="que-provee-active-directory">Que provee active directory?</h3>
+<p>Provee funciones de autorización y autenticación, dentro del sistema operativo Windows (pq ps Microsoft flaco).</p>
+<p>Una forma "sencilla" de establecer políticas grupales de acceso a recursos compartidos.</p>
+<p>Retrocompatibilidad con muchas versiones de Windows y Windows Server</p>
+<p>Muchisima escalabilidad, se pueden manejar millones de objetos por dominio, y varios dominios por organización.</p>
+<h3 id="problemas-notorios-desde-un-principio">Problemas notorios desde un principio</h3>
+<p>Una documentacíón que parece más un libro de leyes lol</p>
+<p>La retrocompatiblidad (trae fallas de seguridad)</p>
+<p>Las configuraciones default suelen ser propensas a ser vulnerables (not secure by default)</p>
+<h3 id="interes-en-ciberseguridad">Interés en ciberseguridad</h3>
+<p>El 95% de las empresas de Fortune 500 utilizan Active Directory, entonces tenemos q saber q rollo
+Active Directory es casi un monopolio cuando hablamos de servicios de directorio, si haces pentesting de red es casi seguro que te lo topes</p>
+<h2 id="estructura">Estructura</h2>
+<p>Tenemos un bosque, el cual contiene varios "arboles" a los que llamaremos dominios (los cuales a su vez también pueden tener más dominios adentro, pero luego vemos eso). Cada uno de estos dominios es independiente entre sí, excepto cuando se establecen "trust relationships" entre ellos.</p>
+<p>Las trust relationships son relaciones entre dominios que permiten que los usuarios de un dominio puedan acceder a otro con las mismas credenciales.</p>
+<p>Un dominio contiene dentro de si objetos que representan tanto a los usuarios, como a los recursos compartidos, como a las maquinas encargadas de controlar estos accesos y portar ciertas sutilezas especiales. Estos ultimos son los Domain Controllers, los cuales veremos más adelante.</p>
+<p>Cada objeto posee atributos que definen características del objeto (como en la programación orientada a objetos). Por ejemplo, una instancia de "Computer" podría tener atributos tales como el hostname o el DNS name. Todos los atributos tienen un nombre LDAP asociado.</p>
+<p>Existe un schema, el cual es la guía de qué objetos pueden existir dentro de todo el bosque y cuáles serán sus atributos. Si te vas a POO, piensalo como el archivo que define todas las clases que serán usadas por el programa. Este es único por bosque y si alguno de los dominios lo edita, el cambio se refleja en todos los demás.</p>
+<p>Existen tambien contenedores, los cuales pertenecen a un dominio y contienen objetos.</p>
+<p>Las hojas son objetos que ya no contienen otros objetos x si mismos</p>
+<h2 id="atributos-globales-para-los-objetos">Atributos globales para los objetos</h2>
+<h3 id="identificadores-guid-sid-distinguished-name">Identificadores: GUID, SID, Distinguished Name</h3>
+<p>Todo objeto en AD posee GUID, el cual es único por objeto, y de hecho como es una implementación de UUID (de implementación cerrada) podemos confiar en q si Microsoft hizo bien su chamba, genuinamente esta GUID es única incluso a nivel universal(la probabilidad de que no lo sea es menor a la probabilidad de escoger dos veces un mismo átomo aleatorio entre todos los átomos de la galaxia).</p>
+<p>Ahora, existen tipos de objetos especiales llamados Security principals, los cuales son aquellos que se pueden autenticar "sean usuarios, cuentas de computadora, procesos, etc". Estos tienen también otrp identificador llamado security identifier (SID). Este también es "unico" en todo el forest, pero no es unico en todo el universo, y de hecho hay algunos SIDs conocidos que se reutilizan para identificar ciertos grupos y usuarios genéricos, luego los veremos probablemente.</p>
+<p>El distinguished name(DN) de un objeto es la ruta completa al objeto. Ejemplo: cn=bjones, ou=IT, ou=Employees, dc=inlanefreight, dc=local. Su DN es inlanefreight.local/Users/Sales/Managers/BJones</p>
+<h3 id="otros">Otros</h3>
+<p>Tambien tenemos otros identificadores que generalmente se derivan de los anteriores o no son tan importantes pero tampoco es malo tener la referencia de cuáles son:</p>
+<h4 id="relative-distinguished-name">Relative Distinguished Name</h4>
+<p>Es el distinguished name pero recortado al nivel que lo pueda hacer unico al nivel de la Organizational Unit a la que pertenece. Generalmente es la ultima sección del distinguised name.</p>
+<h4 id="samaccountname">sAMAccountName</h4>
+<p>Es otro identificador para Security Principals (objetos autenticables). Puedes pensarlo como el nombre de usuario que utilizas para autenticarte, solo que con la característica especial de que este brother es compatible con SAM (es decir, con sistemas antiguos de Windows)</p>
+<h4 id="userprincipalname">userPrincipalName</h4>
+<p>Ooootro identificador, pero este diseñado en formato de cuenta de correo (usuario@dominio) Este no es obligatorio.</p>
+<h2 id="domain-controller">Domain Controller</h2>
+<p>Los domain controllers son las partes encargadas de darle la funcionalidad a Active Directory.</p>
+<p>Son máquinas a las cuales se les asignan distintas labores relacionadas con la autenticación, los permisos, el uso de recursos, etc. En un principio había un solo domain controller por dominio y era el que bisneaba todo, pero después se crearon los <em>Roles FSMO</em> (Flexible Single Master Operation) para tener distintos controladores de dominio con distintas responsabilidades. Aqui hay algunos ejemplos.</p>
+<p>No todos estos son Roles FSMO, se hará la aclaración correspondiente en cada uno.</p>
+<h3 id="schema-master-uno-por-bosque">Schema Master (uno por bosque)</h3>
+<p>Guarda la copia maestra del Schema</p>
+<h3 id="domain-naming-master-uno-por-bosque">Domain Naming Master (uno por bosque)</h3>
+<p>Maneja los nombres de los dominios, se asegura de que dos dominios del mismo nombre no puedan ser creados en el mismo bosque.</p>
+<h3 id="relative-id-master-rid-pa-los-cuates-uno-por-dominio">Relative ID Master (RID pa los cuates)(uno por dominio)</h3>
+<p>Asigna bloques de RIDs a otros Domain Controllers dentro del dominio. Esto asegura que a los objetos no se les asigne un mismo SID.</p>
+<h3 id="primary-domain-controller-emulator-pdc-pa-los-cuates-uno-por-dominio">Primary Domain Controller Emulator (PDC pa los cuates)(uno por dominio)</h3>
+<p>Este es el mero fuerte, este es el domain controller autoritativo que responde a las solicitudes relacionadas con autenticación, como cambios de contraseñas, etc. También es este el brother que mantiene la hora y fecha maestra para todo el dominio.</p>
+<h3 id="infraestructure-master-uno-por-dominio">Infraestructure Master(uno por dominio)</h3>
+<p>Se encarga de traducir GUIDs, SIDs y DNs entre dominios, trabaja en conjunto con el resto de DCs del bosque para asegurarse de que estos se mantengan consistentes trabajando de la mano particularmente con el Global Catalog</p>
+<h3 id="global-catalog">Global Catalog</h3>
+<p>Guarda una copia parcial y limitada de todos los objetos del bosque. Esto facilita busquedas en todo el bosque, facilita la autenticación entre dominios y como vimos trabaja de la mano con el IM para mantener estas congruencias en los nombres.</p>
+<p>Un global catalog no es un rol FSMO, por lo que en realidad un servidor de global catalog no es un controlador de dominio, aunque trabaja de la mano con ellos. De hecho se recomienda que el GC y el IM no existan en la misma máquina.</p>
+<h3 id="nivel-de-funcionalidad">Nivel de funcionalidad</h3>
+<p>La versión de Windows que ejecutan los domain controllers de un dominio determinan las funcionalidades que puede poseer un dominio. Esto mediante el Domain Functional Level.</p>
+<p>El nivel funcional de un dominio se determina por la versión más antigua que esté ejecutando un controlador de dominio. También este es un dato interesante a tener en cuenta cuando andes bisneando un dominio.</p>
+<h2 id="access-control-entries">Access Control Entries</h2>
+<p>Es aquí donde comenzamos a hablar de permisos.</p>
+<p>Cada Access Control Entry contiene los siguientes datos:</p>
+<ul>
+<li>
+<p>Trustee (cuenta de usuario, grupo, o sesión)</p>
+</li>
+<li>
+<p>Permisos del trustee</p>
+</li>
+<li>
+<p>Negaciones del trustee</p>
+</li>
+</ul>
+<p>Una ACE forma parte siempre de una ACL, y la ACL a su vez está vinculada siempre al objeto que protege.</p>
+<h3 id="access-control-list">Access Control List</h3>
+<p>Son todas las ACEs que aplican a un objeto dado, pueden ser de dos tipos: DACL y SACL</p>
+<h3 id="discretionary-access-control-list">Discretionary Access Control List</h3>
+<p>Son las ACEs vinculadas al objeto que hablan de los permisos que tiene cada usuario sobre este objeto. Estas hablan de acceso y por lo tanto en el sentido más estricto de autenticación esta es la verdadera ACL</p>
+<h3 id="system-access-control-list">System Access Control List</h3>
+<p>Esta no define permisos de acceso, esta define los eventos a auditar sobre el objeto que luego los administradores va a poder consultar en los registros correspondientes.</p>
+<h2 id="donde-se-guardan-estos-datos">Donde se guardan estos datos?</h2>
+<p>Toda la información que acabamos de revisar sobre un Active Directory se guarda en NTDS.DIT</p>
+<p>Este es un archivo que se guarda en un Domain Controller, especificamente en la ruta C:\Windows\NTDS\</p>
+<p>En este archivo se guarda toda la información sobre los usuarios, los objetos, los grupos y particularmente para nosotros, aquí existen los <em>password hashes</em> que luego podremos usar para algunos ataques fancys</p>
+<p>Pero cabe señalar que cada Domain Controller solo guarda en su NTDS.DIT la información de su dominio, no la de todo el bosque.</p>
+<h2 id="protocolos">Protocolos</h2>
+<p>Active Directory utiliza varios protocolos para cumpir con sus funciones, los principales a observar son:</p>
+<h3 id="kerberos">Kerberos</h3>
+<p>Es el protocolo de autenticación que utiliza Active Directory. Para entender por qué es tan complejo primero tenemos que entender los principios buscados detrás de su diseño.</p>
+<h4 id="1-no-transmitir-contrasenas-en-texto-plano">1. No transmitir contraseñas en texto plano</h4>
+<p>La contraseña nunca debe viajar por la red, pues una posible interceptación de la misma podría traer problemas. En lugar de eso, la contraseña se usará solamente para validar la identidad del usuario y así darle un ticket, el cual es el que usará para el resto del procedimiento</p>
+<h4 id="2-autenticacion-mutua">2. Autenticación mutua</h4>
+<p>Las tres partes involucradas (autenticador, servicio y cliente) se demuestran sus autenticidades mediante secretos que cada una de estas partes debería de conocer por su posición.</p>
+<h4 id="3-minimizar-la-exposicion-de-las-credenciales">3. Minimizar la exposición de las credenciales</h4>
+<p>Solamente el servidor de autenticación conoce los secretos de cada una de las partes, ni el servicio conoce la contreña del usuario ni el cliente conocerá el secreto del servicio. Y además, esta confianza se tiene que estar renovando constantemente pues la autenticación es temporal.</p>
+<h4 id="4-centralizacion-para-escalabilidad">4. Centralización para escalabilidad</h4>
+<p>Tanto clientes como servicios negocian los accesos unicamente con el servidor y por ocasiones contadas. Asi no es necesario que el cliente tenga que estar demostrando su identidad con cada servicio que quiera usar, y con esto, que todos los servicios deban de tener la infraestructura necesaria para hacer esto.</p>
+<h4 id="5-modularidad">5. Modularidad</h4>
+<p>Cada paso de Kerberos se encuentra modularizado (como si fueran microservicios) por lo que actualizarlos para mantenerlos vigentes a las necesidades actuales es sencillo.</p>
+<p>Entonces, el flujo de Kerberos es el siguiente:</p>
+<ol>
+<li>
+<p>El usuario le pide un TGT al Authentication Service (AS), esto lo hace mediante un mensaje (AS_REQ) que contiene su nombre y una timestamp cifrada usando su contraseña. Este mensaje lo envía al AS</p>
+</li>
+<li>
+<p>El AS recibe el mensaje, consulta la base de datos del KDC para obtener la contraseña del usuario e intenta usarla para desencriptar el mensaje, si es exitoso este proceso, entonces le da un TGT al usuario (AS_REP). El TGT está cifrado con la clave secreta del TGS (contraseña del usuario krbtgt), la cual solo conocen el TGS y el AS.</p>
+</li>
+<li>
+<p>El cliente arma un mensaje (TGS_REQ), esta vez destinado al TGS, el cual contiene el TGT, un autenticador (mensaje cifrado con la identidad del cliente y otra timestamp) y el nombre del servicio al que quiere acceder.</p>
+</li>
+<li>
+<p>El TGS recibe el mensaje y lo intenta desencriptar con su clave secreta, extrae los datos adjuntados y los verifica.</p>
+</li>
+<li>
+<p>EL TGS responde con un mensaje (TGS_REP) que contiene un Service Ticket cifrado con la clave secreta del servicio y una clave de sesión cliente-servicio.</p>
+</li>
+</ol>
+<p>El service ticket contiene una timestamp que dice la fecha en la que fué expedida, para que el servicio pueda saber que el ticket está fresco.</p>
+<ol start="6">
+<li>El usuario usa el Service Ticket para autenticarse con el servicio. Si el servicio logra desencriptar el ticket con su clave privada y reconoce que la info dentro es correcta, entonces le da acceso al usuario.</li>
+</ol>
+<p>El protocolo Kerberos suele usar el puerto 88 para intercambiar tickets, entonces puedes localizar los domain controllers escaneando las máquinas que estén escuchando en este puerto.</p>
+<h4 id="nota">Nota:</h4>
+<p>Todos los DC tienen la facultad de funcionar como KDCs, pero se le da prioridad al PDC Emulator, y este ultimo tiene ciertas facultades especiales.</p>
+<h3 id="ldap">LDAP</h3>
+<p>Apache es a HTTP lo que Active Directory es a LDAP.
+Este es el protocolo de comunicación que usa AD pues</p>
+<h3 id="dns">DNS</h3>
+<p>Trivialote no?
+El servidor DNS escucha en el puerto 53, por si alguien te pregunta :D</p>
+<h3 id="msrpc">MSRPC</h3>
+<h3 id="ntlm">NTLM</h3>
+<p>Otra vez tu bro? Exacto, este protocolo de autenticación se suele usar en lugar de Kerberos en ciertas situaciones, por ejemplo:</p>
+<ol>
+<li>
+<p>Sistemas heredados que no soportan Kerberos</p>
+</li>
+<li>
+<p>Fallo de Kerberos (no hay ningún KDC disponible)</p>
+</li>
+<li>
+<p>Acceso local</p>
+</li>
+<li>
+<p>Aplicaciones heredadas que no soportan Kerberos</p>
+</li>
+</ol>
+<p>Aunque el protocolo de autenticación solo se usa en estos casos, los hashes usados para todos los pasos de Kerberos de hecho son NT Hashes</p>
+<h2 id="ataques-comunes-a-considerar">Ataques comunes a considerar</h2>
+<h3 id="kerberoasting">Kerberoasting</h3>
+<p>Un Service Ticket y un vaso de agua no se le niegan a nadie, y el Service Ticket puede contener el hash NTLM de una cuenta en el servicio. Por lo que kerberoasting se sirve de una cuenta estandar para pedirle un Service Ticket al KDC, una vez obtenido lo extrae de memoria y el atacante se pone a desencriptarlo offline, si el hash NTLM estaba ligado a una contraseña débil entonces esta es obtenida y con esto tenemos acceso a una cuenta de servicio con potencialmente mejores permisos, o también a potencialmente hacer un ataque Silver Ticket a ese servicio.</p>
+<h3 id="golden-ticket">Golden ticket</h3>
+<p>Si ya comprometimos un DC y podemos obtener la clave privada del KDC (la que se comparten el AS y el TGS) entonces podemos forjarnos nuestros propios TGTs con acceso ilimitado al dominio impersonando a cualquier usuario y acceder a cualquier servicio, sin necesidad de conocer las contraseñas de los usuarios.</p>
+<h3 id="silver-ticket">Silver ticket</h3>
+<p>En lugar de falsificar TGTs, falsificamos Service Tickets para acceder a un servicio específico. Para esto necesitamos conocer el hash del servicio, el cual podríamos haber obtenido con kerberoasting</p>
+</section>
+
+  <hr />
+
+  <!-- Post Taxonomies -->
+  
+<!---->
+
+  <!-- Post Nav -->
+  
+<!---->
+
+  <!-- Comment -->
+  
+
+  <!-- Page End inject -->
+  
+</article>
+
+    </main>
+
+    <footer class="mx-auto flex max-w-3xl flex-wrap items-center px-8 py-4 text-sm opacity-60">
+  <div class="mr-auto basis-full lg:basis-1/2">
+    <!---->
+    <!---->
+    &copy; 2025<!---->
+    
+    <a class="link" href="https://IsaacNietoG.github.io">
+      IsaacNietoG
+    </a>
+    
+  </div>
+  <div class="flex basis-full lg:basis-1/2 lg:justify-end">
+    <a class="link mr-6 lg:ml-6" href="https://www.getzola.org/" rel="noopener" target="_blank">
+      Powered by Zola
+    </a>
+    <a class="link" href="https://github.com/st1020/kita" rel="noopener" target="_blank">✎ Kita</a>
+  </div>
+  <!-- Footer inject -->
+  
+</footer>
+
+
+    <!-- Body End inject -->
+    
+  </body>
+</html>

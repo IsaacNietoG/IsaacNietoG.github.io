@@ -1,0 +1,419 @@
+<!doctype html>
+<html class="not-ready lg:text-base" lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Title -->
+  <title>
+    Road to HackMex: Dia 1 - Contract - Tchai&#x27;s Halls of Reflection
+  </title>
+
+  <!-- Meta -->
+  <meta name="theme-color" />
+
+  
+  <!-- Author -->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  <meta name="description" content="Primera máquina del entrenamiento para Hackmex" />
+  <meta name="author" content="IsaacNietoG" />
+  <!-- The Open Graph protocol -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Road to HackMex: Dia 1 - Contract" />
+  <meta property="og:site_name" content="Tchai&#x27;s Halls of Reflection" />
+  <meta property="og:description" content="Primera máquina del entrenamiento para Hackmex" />
+  <meta property="og:url" content="https:&#x2F;&#x2F;IsaacNietoG.github.io&#x2F;blog&#x2F;250619hackmex2025&#x2F;" />
+  
+  <!---->
+  
+  <!---->
+  
+
+  <!-- CSS & JS -->
+  <link rel="preload stylesheet" as="style" href="https://IsaacNietoG.github.io/main.css" />
+  <style>
+    :root {
+      --bg: #f4f4f5;
+      --bg-dark: #18181b;
+      --header: #e4e4e7;
+      --header-dark: #27272a;
+    }
+  </style>
+
+  
+
+  <!-- Dark Icon -->
+  <link rel="preload" as="image" href="https://IsaacNietoG.github.io/icons/theme.svg" />
+
+  <!-- Math -->
+  
+  <!---->
+
+  <!-- Mermaid -->
+  
+  <!---->
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://IsaacNietoG.github.io/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://IsaacNietoG.github.io/apple-touch-icon.png" />
+
+  <!-- Feeds -->
+  
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https:&#x2F;&#x2F;IsaacNietoG.github.io&#x2F;blog&#x2F;250619hackmex2025&#x2F;" />
+
+  <!-- Head inject -->
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header
+  class="header fixed top-0 z-40 mx-auto min-h-[3.5rem] w-full"
+>
+  <div class="mx-auto w-full max-w-4xl p-3 lg:flex lg:justify-between">
+    <div class="flex justify-between">
+      <div class="flex items-center">
+        <a class="text-2xl font-semibold" href="https://IsaacNietoG.github.io">Tchai&#x27;s Halls of Reflection</a>
+        <div
+          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] [background:url(./icons/theme.svg)_left_center/cover_no-repeat] dark:invert dark:[background-position:right]"
+          role="button"
+          aria-label="Dark"
+        ></div>
+      </div>
+      
+      <div
+        class="btn-menu relative z-50 flex h-8 w-8 shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+        role="button"
+        aria-label="Menu"
+      ></div>
+      
+    </div>
+    <script>
+      // base
+      const htmlClass = document.documentElement.classList;
+      setTimeout(() => {
+        htmlClass.remove("not-ready");
+      }, 10);
+
+      // mobile menu
+      const btnMenu = document.querySelector(".btn-menu");
+      btnMenu?.addEventListener("click", () => {
+        htmlClass.toggle("open");
+      });
+
+      // dark theme
+      const setDark = (isDark) => {
+        if (isDark) {
+          document.body.dispatchEvent(new CustomEvent("set-theme", { detail: "dark" }));
+          htmlClass.add("dark");
+        } else {
+          document.body.dispatchEvent(new CustomEvent("set-theme", { detail: "light" }));
+          htmlClass.remove("dark");
+        }
+        localStorage.setItem("dark", isDark);
+      };
+
+      // init
+      const darkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+      if (htmlClass.contains("dark")) {
+        setDark(true);
+      } else {
+        const darkVal = localStorage.getItem("dark");
+        setDark(darkVal ? darkVal === "true" : darkScheme.matches);
+      }
+
+      // listen system
+      darkScheme.addEventListener("change", (event) => {
+        setDark(event.matches);
+      });
+
+      // manual switch
+      const btnDark = document.querySelector(".btn-dark");
+      btnDark.addEventListener("click", () => {
+        setDark(localStorage.getItem("dark") !== "true");
+      });
+    </script>
+    
+    <nav class="flex w-full items-center lg:w-auto">
+      <ul
+        class="nav-wrapper flex w-full flex-col py-2 lg:w-auto lg:flex-row lg:self-center lg:py-0"
+      >
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://IsaacNietoG.github.io/portfolio"
+            >Portfolio</a
+          >
+        </li>
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://IsaacNietoG.github.io/blog"
+            >Blog</a
+          >
+        </li>
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://IsaacNietoG.github.io/about"
+            >About</a
+          >
+        </li>
+        
+      </ul>
+      <!-- Header Nav inject -->
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <!-- Body Start inject -->
+    
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl break-words px-4 pb-16 pt-32 dark:prose-invert prose-pre:rounded-lg prose-img:rounded-lg"
+    >
+      
+<article>
+  <!-- Page Start inject -->
+  
+
+  <header class="mb-16">
+    <h1 class="!my-0 pb-2.5">Road to HackMex: Dia 1 - Contract</h1>
+    <div class="text-sm antialiased opacity-60">
+  
+  <time>2025-06-19</time>
+  <span class="mx-1">&middot;</span>
+  <span>6min</span>
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  
+  <span class="mx-1">&middot;</span>
+  <span>IsaacNietoG</span>
+  
+  <!-- Page Info inject -->
+  
+</div>
+
+  </header>
+
+  
+
+  <!-- TOC -->
+  <!---->
+<div class="block-bg mb-12 flex rounded-lg p-2 text-lg">
+  <details>
+    <summary class="cursor-pointer py-1 pl-4">
+      <span>Table of Contents</span>
+    </summary>
+    <div class="px-2">
+      <ul>
+        
+        <li>
+          <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250619hackmex2025/#introduccion"
+            >Introducción</a
+          >
+          
+          <ul>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250619hackmex2025/#hackmex"
+                >HackMex</a
+              >
+            </li>
+            
+          </ul>
+          
+        </li>
+        
+        <li>
+          <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250619hackmex2025/#writeup-contract-echoctf"
+            >Writeup Contract EchoCTF</a
+          >
+          
+          <ul>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250619hackmex2025/#enumeracion"
+                >Enumeracion</a
+              >
+            </li>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250619hackmex2025/#explotacion"
+                >Explotacion</a
+              >
+            </li>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250619hackmex2025/#privilege-escalation"
+                >Privilege Escalation</a
+              >
+            </li>
+            
+          </ul>
+          
+        </li>
+        
+      </ul>
+    </div>
+  </details>
+</div>
+
+<!---->
+
+  <!-- Content -->
+  <section><h1 id="introduccion">Introducción</h1>
+<p>Primero que nada, buenos días. Ya tiene rato que no escribo por acá pero es que la escuela y en general la vida me ha estado agarrando a putazos jajaj. Han estado pasando muchas cosillas estos meses, aunque estoy agradecido de que en su mayoría han sido buenas <del>mayoría de q 51 a 49 pero ajá</del>. Pero pues equis, aquí andamos de regreso comenzando con una serie de posts que espero dure un rato y nos mantenga entretenidos.</p>
+<h2 id="hackmex">HackMex</h2>
+<p>Como se puede inferir por algunos posts de este blog, formo parte de la agrupación de ciberseguridad de la Facultad de Ingeniería de la UNAM. PumaHat Cibersecurity Team <del>pumahot para los compas</del>. Y como tal, existen ciertas veces en las que participamos como grupo en las competencias de ciberseguridad nacionales, principalmente CTFs. En estos momentos, nos estamos preparando para competir en HackMex.</p>
+<p>HackMex es una competencia organizada por varias asociaciones, empresas e incluso organismos de gobierno (de hecho el IPN anda por ahí), en la cual compiten estudiantes de nivel medio superior, superio y posgrado.</p>
+<p>También compiten sectores del gobierno, asociaciones civiles y empresas privadas; obviamente cada quien en su categoría <del>porque si, soy un cabrón con la percepción de la realidad bien alterada, pero hasta yo sé q no le puedo cantar un cibertiro a algun wey de empresa</del></p>
+<p>Y pues va a empezar a finales de agosto, pero desde ahora vamos a comenzar a entrenar para poder rifarnos una buena posición. Como parte de este entrenamiento, nos vamos a rifar una máquina diaria, y yo voy a estar subiendo los writeups de las q logre headshotear <del>y que ya se puedan subir</del> por aquí. Empezando desde hoy.</p>
+<h1 id="writeup-contract-echoctf">Writeup Contract EchoCTF</h1>
+<h2 id="enumeracion">Enumeracion</h2>
+<h3 id="descripcion-de-la-maquina">Descripción de la máquina</h3>
+<p>Binding agreements with clarity and precision, ensuring mutual commitments are honored and upheld seamlessly.</p>
+<h3 id="escaneo-de-puertos">Escaneo de puertos</h3>
+<p>Inmediatamente vemos servicio http en el puerto 80, un nginx que está hosteando un servicio llamado PhotoShow
+Tambien vemos un servicio ssh</p>
+<p>80/tcp open  http    nginx 1.18.0</p>
+<p>22/tcp open  ssh     OpenSSH 8.4p1 Debian 5+deb11u3 (protocol 2.0)</p>
+<p><img src="/images/blog/Screenshot_20250618_101009.png" alt="Nmap Scan" /></p>
+<h3 id="enumeracion-de-servicios">Enumeracion de servicios</h3>
+<p>Corro un dirsearch en el servicio web, el cual en un principio pensé que me estaba dando un login escondido, pero luego me di cuenta de que existe en la página principal JAJAJA</p>
+<p>Entonces dirsearch en realidad no nos revela nada útil</p>
+<p>Y buscamos vulnerabilidades en las versiones de los servicios</p>
+<p>No encontré otra más que esta.</p>
+<p><a href="https://www.exploit-db.com/exploits/51236">PhotoShow 3.0 - Remote Code Execution - PHP webapps Exploit</a></p>
+<p>Esta requiere una cuenta admin, podriamos bruteforcear la ventana de login que encontramos hace rato para ver si encontramos las credenciales</p>
+<p>Si queremos seguir esta ruta, tenemos las siguientes politicas de nombres y contraseñas:</p>
+<p>Login : letters and numbers only</p>
+<p>Password : minimum 6 characters</p>
+<p><img src="/images/blog/Screenshot_20250618_102222.png" alt="" /></p>
+<p>Pero como podemos ver no tenemos una forma de enumerar los posibles usuarios de manera correcta, pues el mensaje que nos da si fallamos contraseña en usuario existente e inexistente es el mismo, entonces si queremos irnos por esta ruta, estamos a ciegas.</p>
+<p>Por fuerza de hábito, probemos con credenciales comúnes:</p>
+<p>admin:admin</p>
+<p><strong>admin:password</strong></p>
+<p>Fue la segunda lol</p>
+<p>Pues ya teniendo credenciales de admin, podemos correr el exploit.</p>
+<h2 id="explotacion">Explotacion</h2>
+<h3 id="preparar-el-payload">Preparar el payload</h3>
+<p>Antes de correr el exploit debemos realizar algunas modificaciones ligeras para que funcione correctamente.</p>
+<p><img src="/images/blog/Screenshot_20250618_113258.png" alt="" /></p>
+<p>Aquí debemos de modificar el comando a correr para levantar el revshell, pues hacerlo con sockets nos causa problemas. (mata la máquina jaja)</p>
+<p>Usaremos en su lugar netcat. Y además, le meteremos un ampersand al final para no matar shells de otros (perdón)</p>
+<p><img src="/images/blog/Screenshot_20250618_113415.png" alt="" /></p>
+<h3 id="ejecucion">Ejecución</h3>
+<p>Ponemos a la escucha nuestro netcat y corremos el script. We are in.</p>
+<p><img src="/images/blog/Screenshot_20250618_113553.png" alt="" /></p>
+<p>Por fuerza del hábito,  upgradeamos nuestra shell y cobramos inmediatamente la primera bandera con:</p>
+<pre><code>cat &#x2F;etc&#x2F;passwd
+</code></pre>
+<p>Y para verificar nuestras capacidades adentro, podríamos correr linnpeas y ver qué encontramos, pero no guardé screenshot de esta fase así que creanme que encontraremos que /usr/bin/agreement tiene permisos en sudo -l, lo que como sabemos significa que podemos correrlo como root.</p>
+<p>Y agreement es un script en JS que corre lo siguiente:</p>
+<pre><code>#!&#x2F;usr&#x2F;bin&#x2F;env node
+var args = process.argv.slice(2);
+(async () =&gt; {
+    const lib = await import(&#x27;@agreejs&#x2F;shared&#x27;);
+    const { exec } = await import(&#x27;child_process&#x27;);
+    var components = JSON.parse(args[0]);
+    try {
+    lib.mergeInternalComponents(components);
+    } catch (e) { }
+	  var user = {};
+	  if (user.authenticated === true) {
+	  exec(user.cmd);
+	    }
+   })();
+</code></pre>
+<p>Podemos observar que acepta un argumento por linea de comandos, el cual es esperado como objeto JSON</p>
+<p>Luego lo parsea y convierte en <em>components</em></p>
+<p>Define un objeto user y verifica si user.authenticated es true. Si es así, ejecuta user.cmd</p>
+<p>A primer vistazo, podríamos pensar en que si nosotros estamos dando components y el script verifica parámetros de user, entonces no podemos hacer nada. Pero en realidad mediante components podemos y <strong>cambiaremos</strong> los parámetros de user; haciendo lo que se conoce como Prototype Pollution</p>
+<h2 id="privilege-escalation">Privilege Escalation</h2>
+<h3 id="prototype-pollution">Prototype Pollution</h3>
+<p>En JS todos los objetos heredan parámetros de su prototipo, el cual suele ser Object.prototype. Al crear un objeto, JavaScript primero verifica si le estamos dando valor a una propiedad de forma explícita, y si no, entonces busca valores en sus prototipos.
+En este caso, nada nos restringe de modificar el prototipo de component, el cual asumimos Object.prototype, y asumimos que será el mismo para user, y hacer algo como:</p>
+<pre><code>{&quot;__proto__&quot;: {&quot;authenticated&quot;: true, &quot;cmd&quot;: &quot;&#x2F;bin&#x2F;sh&quot;}}
+</code></pre>
+<p>Si nuestras asunciones son correctas, desde el prototipo en común entre components y user podremos definir los parámetros que el segundo usará.</p>
+<p>Antes de seguir, si te interesa este tema y te quedas confundido con la explicación, puedes documentarte más sobre este tema <a href="https://book.hacktricks.wiki/en/pentesting-web/deserialization/nodejs-proto-prototype-pollution/index.html">aquí</a></p>
+<p>No tenemos garantizado que el comando imprima su salida, entonces vámonos recio a usar este espacio para levantar otra revshell como root. Corriendo:</p>
+<pre><code>sudo agreement &#x27;{&quot;__proto__&quot;: {&quot;authenticated&quot;: true, &quot;cmd&quot;: &quot;CMD para abrir una revshell&quot;}}&#x27;
+</code></pre>
+<p>Podríamos probar con ese payload para ver qué ocurre, evidentemente teniendo otro puerto listo para escuchar en nuestro netcat.</p>
+<p>Y efectivamente, con este payload we're in, ahora como roots</p>
+<p><img src="/images/blog/Screenshot_20250618_114627.png" alt="" /></p>
+<p>Y una vez dentro, cobramos las banderas faltantes las cuales serán:</p>
+<ul>
+<li>Una en /etc/shadow</li>
+<li>Una en /proc/1/environ</li>
+<li>El nombre del único archivo en /root</li>
+</ul>
+<p><strong>Headshot</strong></p>
+</section>
+
+  <hr />
+
+  <!-- Post Taxonomies -->
+  
+<!---->
+
+  <!-- Post Nav -->
+  
+<!---->
+
+  <!-- Comment -->
+  
+
+  <!-- Page End inject -->
+  
+</article>
+
+    </main>
+
+    <footer class="mx-auto flex max-w-3xl flex-wrap items-center px-8 py-4 text-sm opacity-60">
+  <div class="mr-auto basis-full lg:basis-1/2">
+    <!---->
+    <!---->
+    &copy; 2025<!---->
+    
+    <a class="link" href="https://IsaacNietoG.github.io">
+      IsaacNietoG
+    </a>
+    
+  </div>
+  <div class="flex basis-full lg:basis-1/2 lg:justify-end">
+    <a class="link mr-6 lg:ml-6" href="https://www.getzola.org/" rel="noopener" target="_blank">
+      Powered by Zola
+    </a>
+    <a class="link" href="https://github.com/st1020/kita" rel="noopener" target="_blank">✎ Kita</a>
+  </div>
+  <!-- Footer inject -->
+  
+</footer>
+
+
+    <!-- Body End inject -->
+    
+  </body>
+</html>

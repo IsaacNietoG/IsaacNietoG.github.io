@@ -1,0 +1,401 @@
+<!doctype html>
+<html class="not-ready lg:text-base" lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Title -->
+  <title>
+    Road to HackMex: Dia 2 - Magical - Tchai&#x27;s Halls of Reflection
+  </title>
+
+  <!-- Meta -->
+  <meta name="theme-color" />
+
+  
+  <!-- Author -->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  <meta name="description" content="Segunda máquina del entrenamiento para Hackmex" />
+  <meta name="author" content="IsaacNietoG" />
+  <!-- The Open Graph protocol -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Road to HackMex: Dia 2 - Magical" />
+  <meta property="og:site_name" content="Tchai&#x27;s Halls of Reflection" />
+  <meta property="og:description" content="Segunda máquina del entrenamiento para Hackmex" />
+  <meta property="og:url" content="https:&#x2F;&#x2F;IsaacNietoG.github.io&#x2F;blog&#x2F;250620hackmex2025&#x2F;" />
+  
+  <!---->
+  
+  <!---->
+  
+
+  <!-- CSS & JS -->
+  <link rel="preload stylesheet" as="style" href="https://IsaacNietoG.github.io/main.css" />
+  <style>
+    :root {
+      --bg: #f4f4f5;
+      --bg-dark: #18181b;
+      --header: #e4e4e7;
+      --header-dark: #27272a;
+    }
+  </style>
+
+  
+
+  <!-- Dark Icon -->
+  <link rel="preload" as="image" href="https://IsaacNietoG.github.io/icons/theme.svg" />
+
+  <!-- Math -->
+  
+  <!---->
+
+  <!-- Mermaid -->
+  
+  <!---->
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://IsaacNietoG.github.io/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://IsaacNietoG.github.io/apple-touch-icon.png" />
+
+  <!-- Feeds -->
+  
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https:&#x2F;&#x2F;IsaacNietoG.github.io&#x2F;blog&#x2F;250620hackmex2025&#x2F;" />
+
+  <!-- Head inject -->
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header
+  class="header fixed top-0 z-40 mx-auto min-h-[3.5rem] w-full"
+>
+  <div class="mx-auto w-full max-w-4xl p-3 lg:flex lg:justify-between">
+    <div class="flex justify-between">
+      <div class="flex items-center">
+        <a class="text-2xl font-semibold" href="https://IsaacNietoG.github.io">Tchai&#x27;s Halls of Reflection</a>
+        <div
+          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] [background:url(./icons/theme.svg)_left_center/cover_no-repeat] dark:invert dark:[background-position:right]"
+          role="button"
+          aria-label="Dark"
+        ></div>
+      </div>
+      
+      <div
+        class="btn-menu relative z-50 flex h-8 w-8 shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+        role="button"
+        aria-label="Menu"
+      ></div>
+      
+    </div>
+    <script>
+      // base
+      const htmlClass = document.documentElement.classList;
+      setTimeout(() => {
+        htmlClass.remove("not-ready");
+      }, 10);
+
+      // mobile menu
+      const btnMenu = document.querySelector(".btn-menu");
+      btnMenu?.addEventListener("click", () => {
+        htmlClass.toggle("open");
+      });
+
+      // dark theme
+      const setDark = (isDark) => {
+        if (isDark) {
+          document.body.dispatchEvent(new CustomEvent("set-theme", { detail: "dark" }));
+          htmlClass.add("dark");
+        } else {
+          document.body.dispatchEvent(new CustomEvent("set-theme", { detail: "light" }));
+          htmlClass.remove("dark");
+        }
+        localStorage.setItem("dark", isDark);
+      };
+
+      // init
+      const darkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+      if (htmlClass.contains("dark")) {
+        setDark(true);
+      } else {
+        const darkVal = localStorage.getItem("dark");
+        setDark(darkVal ? darkVal === "true" : darkScheme.matches);
+      }
+
+      // listen system
+      darkScheme.addEventListener("change", (event) => {
+        setDark(event.matches);
+      });
+
+      // manual switch
+      const btnDark = document.querySelector(".btn-dark");
+      btnDark.addEventListener("click", () => {
+        setDark(localStorage.getItem("dark") !== "true");
+      });
+    </script>
+    
+    <nav class="flex w-full items-center lg:w-auto">
+      <ul
+        class="nav-wrapper flex w-full flex-col py-2 lg:w-auto lg:flex-row lg:self-center lg:py-0"
+      >
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://IsaacNietoG.github.io/portfolio"
+            >Portfolio</a
+          >
+        </li>
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://IsaacNietoG.github.io/blog"
+            >Blog</a
+          >
+        </li>
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://IsaacNietoG.github.io/about"
+            >About</a
+          >
+        </li>
+        
+      </ul>
+      <!-- Header Nav inject -->
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <!-- Body Start inject -->
+    
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl break-words px-4 pb-16 pt-32 dark:prose-invert prose-pre:rounded-lg prose-img:rounded-lg"
+    >
+      
+<article>
+  <!-- Page Start inject -->
+  
+
+  <header class="mb-16">
+    <h1 class="!my-0 pb-2.5">Road to HackMex: Dia 2 - Magical</h1>
+    <div class="text-sm antialiased opacity-60">
+  
+  <time>2025-06-20</time>
+  <span class="mx-1">&middot;</span>
+  <span>5min</span>
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  
+  <span class="mx-1">&middot;</span>
+  <span>IsaacNietoG</span>
+  
+  <!-- Page Info inject -->
+  
+</div>
+
+  </header>
+
+  
+
+  <!-- TOC -->
+  <!---->
+<div class="block-bg mb-12 flex rounded-lg p-2 text-lg">
+  <details>
+    <summary class="cursor-pointer py-1 pl-4">
+      <span>Table of Contents</span>
+    </summary>
+    <div class="px-2">
+      <ul>
+        
+        <li>
+          <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250620hackmex2025/#writeup-magical-echoctf"
+            >Writeup: Magical - echoCTF</a
+          >
+          
+          <ul>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250620hackmex2025/#informacion-general"
+                >Información General</a
+              >
+            </li>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250620hackmex2025/#descripcion-de-la-maquina"
+                >Descripción de la máquina</a
+              >
+            </li>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250620hackmex2025/#enumeracion"
+                >Enumeración</a
+              >
+            </li>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250620hackmex2025/#explotacion"
+                >Explotación</a
+              >
+            </li>
+            
+            <li>
+              <a class="no-underline hover:underline" href="https://IsaacNietoG.github.io/blog/250620hackmex2025/#escalacion-de-privilegios"
+                >Escalación de Privilegios</a
+              >
+            </li>
+            
+          </ul>
+          
+        </li>
+        
+      </ul>
+    </div>
+  </details>
+</div>
+
+<!---->
+
+  <!-- Content -->
+  <section><h1 id="writeup-magical-echoctf">Writeup: Magical - echoCTF</h1>
+<h2 id="informacion-general">Información General</h2>
+<ul>
+<li><strong>Nombre de la Máquina</strong>: magical</li>
+<li><strong>Plataforma</strong>: echoCTF</li>
+<li><strong>Dificultad</strong>: Medio</li>
+<li><strong>Sistema Operativo</strong>: Linux</li>
+<li><strong>Fecha</strong>: 19 Jun 2025</li>
+<li><strong>Autor</strong>: mrtaichi</li>
+</ul>
+<h2 id="descripcion-de-la-maquina">Descripción de la máquina</h2>
+<p>Messing with one file to affect another, may sound like magic but its simply an inode away...</p>
+<h2 id="enumeracion">Enumeración</h2>
+<h3 id="escaneo-inicial">Escaneo Inicial</h3>
+<p>Escaneamos con Nmap y mientras tanto, nos conectamos directamente con el browser, a ver si de pura fé hay un servicio HTTP. Y en efecto, tenemos página en el puerto 80 usando Sitemagic CMS</p>
+<p><img src="/images/blog/Screenshot_20250619_101457.png" alt="Sitio" /></p>
+<p>Inmediatamente encontraremos un login arriba a la derecha, posiblemente con las contraseñas default activadas. (admin:admin)</p>
+<p>Y de paso termina el nmap, que nos confirma SiteMagic y además lo siguiente:</p>
+<p>PORT   STATE SERVICE VERSION</p>
+<p>22/tcp open  ssh     OpenSSH 8.4p1 Debian 5+deb11u3 (protocol 2.0)</p>
+<p>| ssh-hostkey:</p>
+<p>|   3072 ad:fe:42:e6:3d:04:f3:60:02:c9:df:22:ee:39:12:0c (RSA)</p>
+<p>|_  256 f2:8e:0b:b4:40:c8:37:df:0d:42:d1:4d:4e:33:83:f7 (ED25519)</p>
+<p>80/tcp open  http    Apache httpd 2.4.61 ((Debian))</p>
+<p>|_http-title: Welcome - about us</p>
+<p>|_http-generator: Sitemagic CMS</p>
+<p>|_http-server-header: Apache/2.4.61 (Debian)</p>
+<p>Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel</p>
+<p><img src="/images/blog/Screenshot_20250619_101707.png" alt="Nmap" /></p>
+<h3 id="analisis-de-servicio">Análisis de Servicio</h3>
+<p>Como vimos previamente, el sitio utiliza Sitemagic CMS y, si lo intentamos, podremos observar que las credenciales de administrador están por default.</p>
+<p>Creo que esto nos da suficiente material para un foothold inicial pero por si acaso corro un dirsearch a ver q sale</p>
+<p>Y no nos dió nada útil el dirsearch</p>
+<h2 id="explotacion">Explotación</h2>
+<h3 id="busqueda-de-vulnerabilidades">Busqueda de vulnerabilidades</h3>
+<p>Mientras tanto, googleamos exploits para el CMS y el primer resultado es un Arbitrary File Upload que corre una página php sin problemas</p>
+<p>https://www.exploit-db.com/exploits/48788</p>
+<p>Esto se ve prometedor, antes de ahondar más podemos intentar subir de una vez nuestra revshell con este exploit</p>
+<h3 id="intentos-de-explotaciones">Intentos de explotaciones</h3>
+<p>Preparamos el payload en vista de que al parecer podemos subir cualquier php</p>
+<p><img src="/images/blog/Screenshot_20250619_112005.png" alt="Payload" /></p>
+<p>Y observemos que, el exploit a grosso modo lo que hace es aprovechar que no hay sanitización en el file upload del CMS para poder justamente subir cualquier archivo. Si observamos la solicitud mostrada en exploit-db, nos daremos cuenta de que sube el archivo directamente, sin ningún mecanismo para evadir posibles sanitizaciones. Entonces, creo que ni siquiera es necesario replicar la solicitud mostrada en el exploit. Podemos intentar subir nuestro archivo directamente desde la funcionalidad ofrecida por el servicio</p>
+<p><img src="/images/blog/Screenshot_20250619_120638.png" alt="Upload" /></p>
+<p>Y como podemos ver, al menos la subida del payload es funcional. Intentaremos subirlo bajo la carpeta files/images porque no pude hacerlo accesible directamente en files. Una vez hecho esto, nuestra payload estará accesible directamente bajo /files/images/payload.php</p>
+<p>La payload que subí es un web shell interactivo, desde el cual de una vez podríamos sacar las banderas más obvias, como son la bandera bajo /etc/passwd y la bandera en printenv.</p>
+<p><img src="/images/blog/Screenshot_20250619_103250.png" alt="Web shell" /></p>
+<p>De todas formas, si no lo hacemos en este paso, esta web shell también funciona para levantar nuestra reverse shell con netcat. Hagámoslo de una vez para tener una shell bonita. Ya dije muchas veces la palabra shell.</p>
+<h3 id="explotacion-1">Explotación</h3>
+<p>Ponemos a escuchar nuestro netcat y mandamos el comando para conectarnos desde la webshell que levantamos en el paso anterior. We're in.</p>
+<p><img src="/images/blog/Screenshot_20250619_103341.png" alt="Revshell" /></p>
+<p>Upgradeamos nuestra shell y corremos linpeas para ver q nos dice</p>
+<h2 id="escalacion-de-privilegios">Escalación de Privilegios</h2>
+<h3 id="analisis">Análisis</h3>
+<p>Y algo que nos llama la atención inmediatamente del reporte es que nos dice que tenemos derecho a ejecutar el comando ls como sudo. Y no solo eso, si no que <strong>podemos modificar</strong> /bin/ls, que es justamente el comando que <strong>tambien podemos ejecutar como sudo</strong></p>
+<p><img src="/images/blog/Screenshot_20250619_121312.png" alt="a" />
+<img src="/images/blog/Screenshot_20250619_121148.png" alt="b" /></p>
+<h3 id="explotacion-2">Explotación</h3>
+<p>Entonces, se nos ocurren ideas bastante sucias, pero la más trivial sería secuestrar ls para ejecutar un script propio. Y esto es justo lo que vamos a intentar.</p>
+<p><img src="/images/blog/Screenshot_20250619_155403.png" alt="root" /></p>
+<p>Y efectivamente funcionó. Una vez hecho esto, vaciamos el resto de banderas faltantes. Que son:</p>
+<ul>
+<li>Una en /etc/shadow</li>
+<li>El nombre del archivo en /root (esta ya la podíamos sacar incluso con el puro ls con derechos de admin</li>
+</ul>
+<p>Y listo. <strong>headshot</strong></p>
+<h3 id="nota-final">Nota final</h3>
+<p>Esta forma de escalar es la más trivial y obvia, que podríamos hacer con cualquier binario en el cual cumplamos las condiciones de:</p>
+<ul>
+<li>Poderlo ejecutar como root</li>
+<li>Poder modificarlo</li>
+</ul>
+<p>Pero... si te interesa un reto, recordemos la descripción de la máquina.</p>
+<blockquote>
+<p>Messing with one file to affect another, may sound like magic but its simply an inode away...</p>
+</blockquote>
+<p>Recordemos que ls también nos permite ver el inode en el cual está almacenado un archivo, y a veces, <strong>varios archivos pueden estar almacenados en un mismo inode</strong>. En teoría, si encontráramos un archivo que podemos modificar el cual comparta inode con otro archivo que no podamos modificar pero que nos resulte interante modificar (/etc/shadow por ejemplo) podríamos utilizar enlaces simbólicos duros para modificar el archivo en el que no tenemos permisos, usando al archivo del que sí tenemos permisos. Si quieres una forma de escalar privilegios más interesante, que aproveche esto, te lo dejo de tarea (y que me avises cómo le hiciste jjjj)</p>
+</section>
+
+  <hr />
+
+  <!-- Post Taxonomies -->
+  
+<!---->
+
+  <!-- Post Nav -->
+  
+<!---->
+
+  <!-- Comment -->
+  
+
+  <!-- Page End inject -->
+  
+</article>
+
+    </main>
+
+    <footer class="mx-auto flex max-w-3xl flex-wrap items-center px-8 py-4 text-sm opacity-60">
+  <div class="mr-auto basis-full lg:basis-1/2">
+    <!---->
+    <!---->
+    &copy; 2025<!---->
+    
+    <a class="link" href="https://IsaacNietoG.github.io">
+      IsaacNietoG
+    </a>
+    
+  </div>
+  <div class="flex basis-full lg:basis-1/2 lg:justify-end">
+    <a class="link mr-6 lg:ml-6" href="https://www.getzola.org/" rel="noopener" target="_blank">
+      Powered by Zola
+    </a>
+    <a class="link" href="https://github.com/st1020/kita" rel="noopener" target="_blank">✎ Kita</a>
+  </div>
+  <!-- Footer inject -->
+  
+</footer>
+
+
+    <!-- Body End inject -->
+    
+  </body>
+</html>

@@ -1,0 +1,264 @@
+<!doctype html>
+<html class="not-ready lg:text-base" lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Title -->
+  <title>
+    About me - Tchai&#x27;s Halls of Reflection
+  </title>
+
+  <!-- Meta -->
+  <meta name="theme-color" />
+
+  
+  <!-- Author -->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  <meta name="description" content="About me" />
+  <meta name="author" content="IsaacNietoG" />
+  <!-- The Open Graph protocol -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="About me" />
+  <meta property="og:site_name" content="Tchai&#x27;s Halls of Reflection" />
+  <meta property="og:description" content="About me" />
+  <meta property="og:url" content="https:&#x2F;&#x2F;IsaacNietoG.github.io&#x2F;about&#x2F;" />
+  
+  <!---->
+  
+  <!---->
+  
+
+  <!-- CSS & JS -->
+  <link rel="preload stylesheet" as="style" href="https://IsaacNietoG.github.io/main.css" />
+  <style>
+    :root {
+      --bg: #f4f4f5;
+      --bg-dark: #18181b;
+      --header: #e4e4e7;
+      --header-dark: #27272a;
+    }
+  </style>
+
+  
+
+  <!-- Dark Icon -->
+  <link rel="preload" as="image" href="https://IsaacNietoG.github.io/icons/theme.svg" />
+
+  <!-- Math -->
+  
+  <!---->
+
+  <!-- Mermaid -->
+  
+  <!---->
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://IsaacNietoG.github.io/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://IsaacNietoG.github.io/apple-touch-icon.png" />
+
+  <!-- Feeds -->
+  
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https:&#x2F;&#x2F;IsaacNietoG.github.io&#x2F;about&#x2F;" />
+
+  <!-- Head inject -->
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header
+  class="header fixed top-0 z-40 mx-auto min-h-[3.5rem] w-full"
+>
+  <div class="mx-auto w-full max-w-4xl p-3 lg:flex lg:justify-between">
+    <div class="flex justify-between">
+      <div class="flex items-center">
+        <a class="text-2xl font-semibold" href="https://IsaacNietoG.github.io">Tchai&#x27;s Halls of Reflection</a>
+        <div
+          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] [background:url(./icons/theme.svg)_left_center/cover_no-repeat] dark:invert dark:[background-position:right]"
+          role="button"
+          aria-label="Dark"
+        ></div>
+      </div>
+      
+      <div
+        class="btn-menu relative z-50 flex h-8 w-8 shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+        role="button"
+        aria-label="Menu"
+      ></div>
+      
+    </div>
+    <script>
+      // base
+      const htmlClass = document.documentElement.classList;
+      setTimeout(() => {
+        htmlClass.remove("not-ready");
+      }, 10);
+
+      // mobile menu
+      const btnMenu = document.querySelector(".btn-menu");
+      btnMenu?.addEventListener("click", () => {
+        htmlClass.toggle("open");
+      });
+
+      // dark theme
+      const setDark = (isDark) => {
+        if (isDark) {
+          document.body.dispatchEvent(new CustomEvent("set-theme", { detail: "dark" }));
+          htmlClass.add("dark");
+        } else {
+          document.body.dispatchEvent(new CustomEvent("set-theme", { detail: "light" }));
+          htmlClass.remove("dark");
+        }
+        localStorage.setItem("dark", isDark);
+      };
+
+      // init
+      const darkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+      if (htmlClass.contains("dark")) {
+        setDark(true);
+      } else {
+        const darkVal = localStorage.getItem("dark");
+        setDark(darkVal ? darkVal === "true" : darkScheme.matches);
+      }
+
+      // listen system
+      darkScheme.addEventListener("change", (event) => {
+        setDark(event.matches);
+      });
+
+      // manual switch
+      const btnDark = document.querySelector(".btn-dark");
+      btnDark.addEventListener("click", () => {
+        setDark(localStorage.getItem("dark") !== "true");
+      });
+    </script>
+    
+    <nav class="flex w-full items-center lg:w-auto">
+      <ul
+        class="nav-wrapper flex w-full flex-col py-2 lg:w-auto lg:flex-row lg:self-center lg:py-0"
+      >
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://IsaacNietoG.github.io/portfolio"
+            >Portfolio</a
+          >
+        </li>
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://IsaacNietoG.github.io/blog"
+            >Blog</a
+          >
+        </li>
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://IsaacNietoG.github.io/about"
+            >About</a
+          >
+        </li>
+        
+      </ul>
+      <!-- Header Nav inject -->
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <!-- Body Start inject -->
+    
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl break-words px-4 pb-16 pt-32 dark:prose-invert prose-pre:rounded-lg prose-img:rounded-lg"
+    >
+      
+<article>
+  <header class="mb-16">
+    <h1 class="!my-0 pb-2.5">About me</h1>
+  </header>
+
+  <section><h1 id="hi-welcome-to-my-halls-of-reflection">Hi! Welcome to my halls of reflection!</h1>
+<p><img src="/images/me.jpg" alt="Yo" /></p>
+<p>Hey! I’m Isaac (Tchai to my friends), a fifth-semester Computer Science student with a burning passion for technology, programming, and a deep dive into cybersecurity. My curiosity has led me to explore cryptography, network security, and ethical vulnerability exploitation, with an active focus on competing in Capture The Flag (CTF) events, like HackMex, where I’m sharpening my skills through daily machine challenges and crafting high-quality writeups. I’m aiming for a top spot and potentially build a career in cybersecurity. Beyond that, I’ve worked on projects like a “People Counter” using Python and OpenCV, and “Disbank,” a Java-based app integrating third-party APIs. I’m a fan of automation and system resilience, experimenting with tools like NixOS, WSL2, and rsync for backups, though some of these projects are paused to prioritize HackMex. This blog is my portfolio and a space to share insights on programming, cybersecurity, and my journey toward a productive, balanced life. If you’re into tech, cybersecurity, or just want to chat over a beer, hit me up!</p>
+<h2 id="personal-interests">Personal Interests</h2>
+<h3 id="favorite-music">Favorite Music</h3>
+<p>I like a lot of types of music, but principally I vibe to a mix of Hip Hop, Boleros, and Indie Rock (eclectic, I know). Current favorites:</p>
+<ul>
+<li>Supertramp</li>
+<li>Roberto Carlos</li>
+<li>OK Go</li>
+<li>Cage The Elephant</li>
+</ul>
+<h3 id="favorite-series-movies">Favorite Series &amp; Movies</h3>
+<ul>
+<li>Atlanta</li>
+<li>Sons of Anarchy</li>
+<li>Mr Robot</li>
+<li>Lucifer</li>
+<li>Altered Carbon</li>
+</ul>
+<p>I’m all about Sci-Fi, comedy, and gritty crime dramas.</p>
+<h3 id="books-i-m-reading">Books I'm reading</h3>
+<p>Currently, I am revisiting How to Make Friends and Influence Over People - Dale Carnegie, and reading King Warrior Magician Lover - Robert Moore. I was also reading Getting Things Done - Paul Allen.</p>
+<ul>
+<li>How to Win Friends and Influence People by Dale Carnegie (revisiting for charisma goals)</li>
+<li>King, Warrior, Magician, Lover by Robert Moore (exploring personal archetypes)</li>
+<li>Moonwalking with Einstein by Joshua Foer (slow but steady, diving into memory techniques)</li>
+</ul>
+<p>I’m open to technical reads, philosophy, or books on building healthy habits.</p>
+<h3 id="hobbies-activities">Hobbies &amp; Activities</h3>
+<p>I love cycling to work (weather permitting, otherwise it’s the subway), jamming on my guitar, and hanging out with friends. I’m active in my university’s cybersecurity club, teaching and learning, and I’m eyeing future adventures in bushcraft and car mechanics. My blog might feature cycling trips or tech experiments, so stay tuned!</p>
+<h1 id="where-to-contact-me">Where to contact me</h1>
+<p>If you want to have a chat with me, these are my main contact methods :)</p>
+<p>Telegram: @mrtaichi</p>
+<p>Email: mrtaichi.dev@gmail.com</p>
+<p>LinkedIn: <a href="https://www.linkedin.com/in/isaac-julian-nieto-gallegos-79261a243/">Isaac Nieto</a></p>
+</section>
+</article>
+
+    </main>
+
+    <footer class="mx-auto flex max-w-3xl flex-wrap items-center px-8 py-4 text-sm opacity-60">
+  <div class="mr-auto basis-full lg:basis-1/2">
+    <!---->
+    <!---->
+    &copy; 2025<!---->
+    
+    <a class="link" href="https://IsaacNietoG.github.io">
+      IsaacNietoG
+    </a>
+    
+  </div>
+  <div class="flex basis-full lg:basis-1/2 lg:justify-end">
+    <a class="link mr-6 lg:ml-6" href="https://www.getzola.org/" rel="noopener" target="_blank">
+      Powered by Zola
+    </a>
+    <a class="link" href="https://github.com/st1020/kita" rel="noopener" target="_blank">✎ Kita</a>
+  </div>
+  <!-- Footer inject -->
+  
+</footer>
+
+
+    <!-- Body End inject -->
+    
+  </body>
+</html>
